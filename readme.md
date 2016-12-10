@@ -37,24 +37,35 @@ DB_PASSWORD=secret <-改成你的MySQL密碼
 * role:
     ```
     0 -> superadmin
+    
     1 -> user
+    
     2 -> pm
+    
     3 -> translators
+    
     ```
 
 ##資料表 documents
 * translation_type:
     ```
     0 -> 未處理
+    
     1 -> 一校
+    
     2 -> 二校
+    
     3 -> 三校
+    
     4 -> 處理完成
+    
     ```
 * payment_type:
     ```
     0 -> 未付款
+    
     1 -> 已付款
+    
     ```
 
 # Laravel PHP Framework
