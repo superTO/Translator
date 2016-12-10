@@ -32,6 +32,29 @@ DB_PASSWORD=secret <-改成你的MySQL密碼
 3. 這樣就能將我打資料表建起來
 4. 如需修改資料結構(新增、刪除...等)，再連絡昶丞同學，勿直接改會出錯!!感恩!!!
 
+# 資料表的權限說明:
+##資料表 users:
+* role:
+    ```
+    0 -> superadmin
+    1 -> user
+    2 -> pm
+    3 -> translators
+    ```
+##資料表 documents
+* translation_type:
+    ```
+    0 -> 未處理
+    1 -> 一校
+    2 -> 二校
+    3 -> 三校
+    4 -> 處理完成
+    ```
+* payment_type:
+    ```
+    0 -> 未付款
+    1 -> 已付款
+    ```
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
