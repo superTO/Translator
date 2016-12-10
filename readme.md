@@ -1,4 +1,4 @@
-#　第一次使用專案
+#第一次使用專案
 1.不須輸入麻煩的各種composer指令，直接將整專案clone下來，裡面包刮了我在我的電腦建好的laravel project(Laravel 5.3)
 
 2.有關於.env檔的設定:
