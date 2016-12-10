@@ -1,3 +1,29 @@
+#　第一次使用專案
+1.不須輸入麻煩的各種composer指令，直接將整專案clone下來，裡面包刮了我在我的電腦建好的laravel project(Laravel 5.3)
+
+2.有關於.env檔的設定:
+
+將.env.example 改成 .env
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=homestead <-改成你的database名
+DB_USERNAME=homestead <-改成你的phpMyAdmin帳號(如果是用phpMyAdmin話)
+DB_PASSWORD=secret <-改成你的phpMyAdmin密碼
+```
+
+# Git 的使用:
+
+1. 第一次使用時，先從專案clone下來
+    * ```git clone https://github.com/superTO/Translator.git```
+2. 每次git順序
+    1. 先用cd切換到專案根目錄
+    2. ```git pull```(將檔案全部抓下來到自己電腦中，避免下次git更新時出錯)
+    3. ```git add .```(記得要有空白在"add" 和 "."之間)(偵測全部專案有被更動到的地方)
+    4. ```git commit -m "your commit message"```(commit這次更動，並註解)
+    5. ```git push"```(push這次的更動到github上)
+    6. github會由第一次clone下來時所提供的git路徑去將本機的檔案自動上傳到對應的repo上
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
