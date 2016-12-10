@@ -24,6 +24,14 @@ DB_PASSWORD=secret <-改成你的MySQL密碼
     4. ```git commit -m "your commit message"```(commit這次更動，並註解)
     5. ```git push"```(push這次的更動到github上)
     6. github會由第一次clone下來時所提供的git路徑去將本機的檔案自動上傳到對應的repo上
+
+# 第一次建資料表:
+1. 先自行創立一個資料庫(p.s.記得這個資料庫名稱要和.env中的```DB_DATABASE```)的值一樣
+2. cd 到專案根目錄底下執行下列指令
+    * ```php artisan migrate```
+3. 這樣就能將我打資料表建起來
+4. 如需修改資料結構(新增、刪除...等)，再連絡昶丞同學，勿直接改會出錯!!感恩!!!
+
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
