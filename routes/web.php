@@ -11,6 +11,12 @@
 |
 */
 
+use App\Mail\getmail;
+
 Route::get('/', function () {
+    //$email = new getmail(new App\User(['name' => 'userName_fromDatabase']));
+    //Mail::to('hello@example.com')->send($email);
+    //send email if you in this page
+    
     return view('welcome');
 });
