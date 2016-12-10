@@ -9,8 +9,8 @@ DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=homestead <-改成你的database名
-DB_USERNAME=homestead <-改成你的phpMyAdmin帳號(如果是用phpMyAdmin話)
-DB_PASSWORD=secret <-改成你的phpMyAdmin密碼
+DB_USERNAME=homestead <-改成你的MySQL帳號
+DB_PASSWORD=secret <-改成你的MySQL密碼
 ```
 
 # Git 的使用:
