@@ -56,6 +56,7 @@ DB_PASSWORD=secret <-改成你的MySQL密碼
     0 -> 未付款
     1 -> 已付款
     ```
+
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
