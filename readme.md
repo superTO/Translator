@@ -41,6 +41,7 @@ DB_PASSWORD=secret <-改成你的MySQL密碼
     2 -> pm
     3 -> translators
     ```
+
 ##資料表 documents
 * translation_type:
     ```
