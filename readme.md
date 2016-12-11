@@ -1,83 +1,3 @@
-#第一次使用專案
-1.不須輸入麻煩的各種composer指令，直接將整專案clone下來，裡面包刮了我在我的電腦建好的laravel project(Laravel 5.3)
-   
-```
-很重要，靠杯重要 by 逸中
-
-git clone https://github.com/superTO/Translator.git
-
-切換到專案根目錄，執行以下指令
-
-composer install
-```
-    
-2.有關於.env檔的設定:
-
-將.env.example 改成 .env
-```
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=homestead <-改成你的database名
-DB_USERNAME=homestead <-改成你的MySQL帳號
-DB_PASSWORD=secret <-改成你的MySQL密碼
-```
-
-# Git 的使用:
-
-1. 第一次使用時，先從專案clone下來(如果你已經執行上面的 第一次使用專案 那這裡可以跳過)
-    * ```git clone https://github.com/superTO/Translator.git```
-2. 每次git順序
-    1. 先用cd切換到專案根目錄
-    2. ```git pull```(將檔案全部抓下來到自己電腦中，避免下次git更新時出錯)
-    3. ```git add .```(記得要有空白在"add" 和 "."之間)(偵測全部專案有被更動到的地方)// "." ->> 要上傳的名稱
-    4. ```git commit -m "your commit message"```(commit這次更動，並註解)
-    5. ```git push"```(push這次的更動到github上)
-    6. github會由第一次clone下來時所提供的git路徑去將本機的檔案自動上傳到對應的repo上
-
-# 第一次建資料表:
-1. 先自行創立一個資料庫(p.s.記得這個資料庫名稱要和.env中的```DB_DATABASE```)的值一樣
-2. cd 到專案根目錄底下執行下列指令
-    * ```php artisan migrate```
-3. 這樣就能將我打資料表建起來
-4. 如需修改資料結構(新增、刪除...等)，再連絡昶丞同學，勿直接改會出錯!!感恩!!!
-
-# 資料表的權限說明:
-##資料表 users:
-* role:
-    ```
-    0 -> superadmin
-    
-    1 -> user
-    
-    2 -> pm
-    
-    3 -> translators
-    
-    ```
-
-##資料表 documents
-* translation_type:
-    ```
-    0 -> 未處理
-    
-    1 -> 一校
-    
-    2 -> 二校
-    
-    3 -> 三校
-    
-    4 -> 處理完成
-    
-    ```
-* payment_type:
-    ```
-    0 -> 未付款
-    
-    1 -> 已付款
-    
-    ```
-
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
@@ -86,7 +6,7 @@ DB_PASSWORD=secret <-改成你的MySQL密碼
 [![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
 [![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-Gary is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
 
 Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
 
