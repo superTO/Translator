@@ -56,7 +56,7 @@ DB_PASSWORD=secret <-改成你的MySQL密碼
 ## documents table
 * id ->　全部文件id
 * document_name ->　文件標題名(ex:國立中正大學外國學生獎學金實施要點)
-* text_name -> 文件檔名(ex: suckmy.txt)
+* text_name -> 文件檔名(ex: laws.txt)
 * due_date ->　uploader 預期之日期
 * original_language -> 原文件語言
 * translated_language -> 欲翻譯後的語言
