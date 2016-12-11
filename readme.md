@@ -20,7 +20,7 @@ DB_PASSWORD=secret <-改成你的MySQL密碼
 2. 每次git順序
     1. 先用cd切換到專案根目錄
     2. ```git pull```(將檔案全部抓下來到自己電腦中，避免下次git更新時出錯)
-    3. ```git add .```(記得要有空白在"add" 和 "."之間)(偵測全部專案有被更動到的地方)
+    3. ```git add .```(記得要有空白在"add" 和 "."之間)(偵測全部專案有被更動到的地方)// "." ->> 要上傳的名稱
     4. ```git commit -m "your commit message"```(commit這次更動，並註解)
     5. ```git push"```(push這次的更動到github上)
     6. github會由第一次clone下來時所提供的git路徑去將本機的檔案自動上傳到對應的repo上

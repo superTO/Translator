@@ -56,7 +56,7 @@ return [
     */
 
     'from' => [
-        'address' => 'hello@gmail.com',  //{{-- fill send mail's address --}}
+        'address' => 'hello@example.com',
         'name' => 'Example',
     ],
 
