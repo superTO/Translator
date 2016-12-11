@@ -66,7 +66,7 @@ DB_PASSWORD=secret <-改成你的MySQL密碼
 * translator1_id ->　第一位翻譯者其id(可空)
 * translator2_id ->　第二位翻譯者其id(可空)
 * translator3_id ->　第三位翻譯者其id(可空)
-* translator4_id ->　第四位翻譯者其id
+* translator4_id ->　第四位翻譯者其id(可空)
 * payment_type -> 付費情況(未付、已付)
 
 # 資料表的權限說明:
