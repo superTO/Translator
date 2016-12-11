@@ -1,6 +1,16 @@
 #第一次使用專案
 1.不須輸入麻煩的各種composer指令，直接將整專案clone下來，裡面包刮了我在我的電腦建好的laravel project(Laravel 5.3)
+   
+```
+很重要，靠杯重要 by 逸中
 
+git clone https://github.com/superTO/Translator.git
+
+切換到專案根目錄，執行以下指令
+
+composer install
+```
+    
 2.有關於.env檔的設定:
 
 將.env.example 改成 .env
