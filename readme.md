@@ -44,6 +44,31 @@ DB_PASSWORD=secret <-改成你的MySQL密碼
 3. 這樣就能將我打資料表建起來
 4. 如需修改資料結構(新增、刪除...等)，再連絡昶丞同學，勿直接改會出錯!!感恩!!!
 
+# 各資料欄位說明:
+## users table:
+* id -> 全部使用網站的人的id
+* account ->　user 帳號
+* password -> user 密碼
+* name -> user 名子／公司名稱
+* role -> phone_number 電話號碼
+* ssn ->　身分證字號／公司行號
+
+## documents table
+* id ->　全部文件id
+* document_name ->　文件標題名(ex:國立中正大學外國學生獎學金實施要點)
+* text_name -> 文件檔名(ex: suckmy.txt)
+* due_date ->　uploader 預期之日期
+* original_language -> 原文件語言
+* translated_language -> 欲翻譯後的語言
+* document_type ->　欲翻譯之文件類型(學術、法規...)
+* uploader_user_id -> 上傳者欲翻譯文件者的id(已與users table的id連動)
+* translation_type -> 文件翻譯之狀態(未翻,一校...)
+* translator1_id ->　第一位翻譯者其id(可空)
+* translator2_id ->　第二位翻譯者其id(可空)
+* translator3_id ->　第三位翻譯者其id(可空)
+* translator4_id ->　第四位翻譯者其id
+* payment_type -> 付費情況(未付、已付)
+
 # 資料表的權限說明:
 ##資料表 users:
 * role:

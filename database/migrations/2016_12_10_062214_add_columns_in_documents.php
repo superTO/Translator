@@ -29,7 +29,9 @@ class AddColumnsInDocuments extends Migration
     public function down()
     {
         Schema::table('documents', function (Blueprint $table) {
+            $table->dropForeign('documents_translator2_id_foreign');
             $table->dropColumn('translator2_id');
+            $table->dropForeign('documents_translator3_id_foreign');
             $table->dropColumn('translator3_id');
         });
     }

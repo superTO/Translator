@@ -28,6 +28,7 @@ class AddDocumentTypeAndTranslator4Id extends Migration
     public function down()
     {
         Schema::table('documents', function (Blueprint $table) {
+            $table->dropForeign('documents_translator4_id_foreign');
             $table->dropColumn('translator4_id');
             $table->dropColumn('document_type');
         });
