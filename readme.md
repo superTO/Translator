@@ -28,10 +28,11 @@ DB_PASSWORD=secret <-改成你的MySQL密碼
 1. 每次git順序
     1. 先用cd切換到專案根目錄
     2. ```git pull```(將檔案全部抓下來到自己電腦中，避免下次git更新時出錯)
-    3. ```git add .```(記得要有空白在"add" 和 "."之間)(偵測全部專案有被更動到的地方)// "." ->> 要上傳的名稱
-    4. ```git commit -m "your commit message"```(commit這次更動，並註解)
-    5. ```git push"```(push這次的更動到github上)
-    6. github會由第一次clone下來時所提供的git路徑去將本機的檔案自動上傳到對應的repo上
+    3. 做coding
+    4. ```git add .```(記得要有空白在"add" 和 "."之間)(偵測全部專案有被更動到的地方)// "." ->> 要上傳的名稱
+    5. ```git commit -m "your commit message"```(commit這次更動，並註解)
+    6. ```git push"```(push這次的更動到github上)
+    7. github會由第一次clone下來時所提供的git路徑去將本機的檔案自動上傳到對應的repo上
 
 # 第一次建資料表:
 1. 先自行創立一個資料庫(p.s.記得這個資料庫名稱要和.env中的```DB_DATABASE```)的值一樣
