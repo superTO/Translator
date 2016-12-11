@@ -1,5 +1,6 @@
 <?php
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,9 +12,11 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
+
 
 Route::get('about',function(){
     return view ('pages.about');
@@ -66,4 +69,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+Route::get('/testmail','MailController@uploadmail');  //test mail
 

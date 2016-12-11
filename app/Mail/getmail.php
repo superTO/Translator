@@ -32,5 +32,7 @@ class getmail extends Mailable
     public function build()
     {
         return $this->view('email.mailcontext');
+        //->to($this->user->email)
+        //->view('email.mailcontext');
     }
 }
