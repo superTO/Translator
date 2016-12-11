@@ -32,7 +32,7 @@ DB_PASSWORD=secret <-改成你的MySQL密碼
     
      【做 coding】
     * coding 完後，將專案 push 同步回 github
-        1. ```git add .```(記得要有空白在"add" 和 "."之間)(偵測全部專案有被更動到的地方)// "." ->> 要上傳的名稱
+        1. ```git add .```(記得要有空白在"add" 和 "."之間)(偵測全部專案有被更動到的地方)// "."
         2. ```git commit -m "your commit message"```(commit這次更動，並註解)
         3. ```git push"```(push這次的更動到github上)
         4. 完成，可去 github 上看更動了哪些部分
