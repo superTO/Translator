@@ -25,7 +25,7 @@ DB_PASSWORD=secret <-改成你的MySQL密碼
 
 # Git 的使用:
 
-1. 第一次使用時，先從專案clone下來
+1. 第一次使用時，先從專案clone下來(如果你已經執行上面的 第一次使用專案 那這裡可以跳過)
     * ```git clone https://github.com/superTO/Translator.git```
 2. 每次git順序
     1. 先用cd切換到專案根目錄
