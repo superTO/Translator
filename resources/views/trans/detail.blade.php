@@ -12,34 +12,34 @@
         <div class="col-lg-6">
             <div class="form-group ">
                 <label for="disabledTextInput">File Name</label>
-                <p>123456</p>
+                <p>{{$document->document_name}}</p>
             </div>
             <div class="form-group ">
                 <label for="disabledTextInput">Status</label>
-                <p>123456</p>
+                <p>{{$document->translation_type}}</p>
             </div>
             <div class="form-group  ">
-                <label for="disabledTextInput">Artical type</label>
-                <p>123456</p>
+                <label for="disabledTextInput">Article type</label>
+                <p>{{$document->document_type}}</p>
             </div>
 
             <div class="form-group  ">
                 <label for="disabledTextInput">Expected Date</label>
-                <p>123456</p>
+                <p>{{$document->due_date}}</p>
             </div>
 
             <div class="form-group">
                 <label for="disabledTextInput">Original Language</label>
-                <p>123456</p>
+                <p>{{$document->original_language}}</p>
             </div>
             <div class="form-group">
                 <label for="disabledTextInput">Translated Language</label>
-                <p>123456</p>
+                <p>{{$document->translated_language}}</p>
             </div>
 
             <div class="form-group  ">
                 <label for="disabledTextInput">Responsor</label>
-                <p>123456</p>
+                <p>{{$document->translator1_id}}</p>
             </div>
         </div>
 
@@ -55,7 +55,7 @@
             </div>
             </div>
             <div class="form-group  ">
-                <a href="/edit"><button type="button" class="btn btn-primary btn-lg btn-block">Edit the file</button></a>
+                <a href="/trans/detail/edit/{{$document->id}}"><button type="button" class="btn btn-primary btn-lg btn-block">Edit the file</button></a>
                 <small id="fileHelp" class="form-text text-muted">Notice : If you are not responsor of this status, DON'T EDIT IT!!!
                 </small>
             </div>

@@ -9,33 +9,37 @@
 
     <div class="col-lg-3"></div>
     <div class="container col-lg-6">
-        <div class="col-lg-6">
+     <div class="col-lg-6">
             <div class="form-group ">
                 <label for="disabledTextInput">File Name</label>
-                <p>123456</p>
+                <p>{{$document->document_name}}</p>
+            </div>
+            <div class="form-group ">
+                <label for="disabledTextInput">Status</label>
+                <p>{{$document->translation_type}}</p>
             </div>
             <div class="form-group  ">
-                <label for="disabledTextInput">Artical type</label>
-                <p>123456</p>
+                <label for="disabledTextInput">Article type</label>
+                <p>{{$document->document_type}}</p>
             </div>
 
             <div class="form-group  ">
                 <label for="disabledTextInput">Expected Date</label>
-                <p>123456</p>
+                <p>{{$document->due_date}}</p>
             </div>
 
             <div class="form-group">
                 <label for="disabledTextInput">Original Language</label>
-                <p>123456</p>
+                <p>{{$document->original_language}}</p>
             </div>
             <div class="form-group">
                 <label for="disabledTextInput">Translated Language</label>
-                <p>123456</p>
+                <p>{{$document->translated_language}}</p>
             </div>
 
             <div class="form-group  ">
                 <label for="disabledTextInput">Responsor</label>
-                <p>123456</p>
+                <p>{{$document->translator1_id}}</p>
             </div>
         </div>
 

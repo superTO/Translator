@@ -34,13 +34,9 @@ Route::get('trans',function(){
     return view ('trans.trans');
 });
 
-Route::get('detail',function(){
-    return view ('trans.detail');
-});
+Route::get('/trans/detail/{document}','DocumentController@showDetail');
 
-Route::get('edit',function(){
-    return view ('trans.edit');
-});
+Route::get('/trans/detail/edit/{document}','DocumentController@showEdit');
 
 Route::get('pm',function(){
     return view ('pm.pm');
