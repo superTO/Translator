@@ -9,7 +9,7 @@
     
     <body>
         
-        <h1>Documents upload by {{$user->name}}</h1>
+        <h1>Documents upload to Translator</h1>
         
         <p>
            context 

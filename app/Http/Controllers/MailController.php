@@ -14,8 +14,15 @@ class MailController extends Controller
 	public function uploadmail()
 	{
 	    
-	    $email = new getmail(new User(['name' => 'fuck']));
-        Mail::to('YOOOOOOOOOO@example.com')->send($email);
+	    //$email = new getmail(User::where('Name', $entry->Name)->firstOrFail());
+	    
+	    //$email = new getmail(new User(['name' => 'fuck']));
+	    
+	    //$date = Carbon::now()->addMinutes(15);
+        //Queue::later($date, 'PMemail@example.com',$email);
+        
+        $email = new getmail();
+        Mail::to('PMemail@example.com')->queue($email);
         
 	    
         
@@ -25,6 +32,6 @@ class MailController extends Controller
 	    
         Mail::to(Input::get('email'))->send($email);
         */
-        return view('user.user');
+        return back();
 	}
 }

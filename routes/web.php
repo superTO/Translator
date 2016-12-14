@@ -65,5 +65,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/testmail','MailController@uploadmail');  //test mail
+Route::get('testmail','MailController@uploadmail');  //test mail
 
