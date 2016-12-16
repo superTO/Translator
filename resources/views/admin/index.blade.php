@@ -13,13 +13,13 @@
 
         <div class="container">
             <div class="col-lg-4">
-                <legend><h1>File List </h1></legend>
+                <legend><h1>Account List </h1></legend>
             </div>
 
             <div class="col-lg-8">
                 <div class="row">
                     <div class="col-md-6 col-md-offset-4">
-                        <h4>Search File</h4>
+                        <h4>Search Account</h4>
                     </div>
                 </div>
                 <div class="row">
@@ -40,24 +40,28 @@
             <table class="table table-striped">
                 <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Permissions</th>
+                    <th>Name</th>
                     <th>Account</th>
-                    <th>Password</th>
                     <th>Phone Number</th>
                     <th>E-mail</th>
 
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td><input type="text" class="form-control" placeholder="Enter filename" value="123456"></td>
-                    <td><input type="text" class="form-control" placeholder="Enter filename" value="123456"></td>
-                    <td><input type="text" class="form-control" placeholder="Enter filename" value="123456"></td>
-                    <td><input type="text" class="form-control" placeholder="Enter filename" value="123456"></td>
-                    <td><input type="text" class="form-control" placeholder="Enter filename" value="123456"></td>
-                </tr>
 
-
+                    @foreach($ids as $ID)
+                        <tr>
+                            <td> {{$ID->id}} </td>
+                            <td> {{$ID->role}} </td>
+                            <td> {{$ID->name}} </td>
+                            <td> {{$ID->account}} </td>
+                            <td> {{$ID->phone_number}} </td>
+                            <td> {{$ID->email}}l </td>
+                            <td><a href="/detail">Edit</a></td>
+                        </tr>
+                    @endforeach
 
                 </tbody>
             </table>

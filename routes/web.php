@@ -56,9 +56,9 @@ Route::get('assign',function(){
     return view ('pm.assign');
 });
 
-Route::get('admin',function(){
-    return view ('admin.admin');
-});
+Route::get('admin/index', 'AdminController@index');
+
+Route::get('admin/edit/{ID}', 'AdminController@edit');
 
 
 Auth::routes();
