@@ -58,8 +58,8 @@
                             <td> {{$ID->name}} </td>
                             <td> {{$ID->account}} </td>
                             <td> {{$ID->phone_number}} </td>
-                            <td> {{$ID->email}}l </td>
-                            <td><a href="/detail">Edit</a></td>
+                            <td> {{$ID->email}} </td>
+                            <td><a href="/admin/edit/{{$ID->id}}">Edit</a></td>
                         </tr>
                     @endforeach
 

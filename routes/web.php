@@ -58,7 +58,9 @@ Route::get('assign',function(){
 
 Route::get('admin/index', 'AdminController@index');
 
-Route::get('admin/edit/{ID}', 'AdminController@edit');
+Route::get('admin/edit/{user}', 'AdminController@edit');
+
+Route::patch('admin/finish/{user}', 'AdminController@finish');
 
 
 Auth::routes();
