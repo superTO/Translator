@@ -22,20 +22,22 @@ class AdminController extends Controller
 
     public function finish(Request $request,User $user)
     {
-        /*
-        $user->name = $request->name;
-        $user->account = $request->account;
-        $user->password = $request->password;
-        $user->ssn = $request->ssn;
-        $user->phone = $request->phone;
-        $user->email = $request->email;
-
-        return redirect('/admin/index');*/
-
         $user->update($request->all());
+
         return redirect('/admin/index');
-        //$request->all();
-        //return $request->all();
-        //return $user;
+    }
+
+    public function disable(User $user)
+    {
+        $user->update(['role'=>($user->role+10)]);
+
+        return redirect('/admin/index');
+    }
+
+    public function enable(User $user)
+    {
+        $user->update(['role'=>($user->role-10)]);
+
+        return redirect('/admin/index');
     }
 }

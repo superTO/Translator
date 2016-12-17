@@ -41,7 +41,7 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Permissions</th>
+                    <th>Role</th>
                     <th>Name</th>
                     <th>Account</th>
                     <th>Phone Number</th>
@@ -50,19 +50,32 @@
                 </tr>
                 </thead>
                 <tbody>
-
                     @foreach($ids as $ID)
                         <tr>
                             <td> {{$ID->id}} </td>
-                            <td> {{$ID->role}} </td>
+                            @if ($ID->role === 0)
+                                <td> Administrator </td>
+                            @elseif ($ID->role === 1)
+                                <td> User </td>
+                            @elseif ($ID->role === 2)
+                                <td> PM </td>
+                            @elseif ($ID->role === 3)
+                                <td> Translator </td>
+                            @elseif ($ID->role >= 10)
+                                <td> Disabled Account </td>
+                            @endif
                             <td> {{$ID->name}} </td>
                             <td> {{$ID->account}} </td>
                             <td> {{$ID->phone_number}} </td>
                             <td> {{$ID->email}} </td>
+                            @if ($ID->role > 10)
+                                <td> <a href="/admin/enable/{{$ID->id}}">Enable</a> </td>
+                            @else
+                                <td> <a href="/admin/disable/{{$ID->id}}">Disable</a> </td>
+                            @endif
                             <td><a href="/admin/edit/{{$ID->id}}">Edit</a></td>
                         </tr>
                     @endforeach
-
                 </tbody>
             </table>
         </div>

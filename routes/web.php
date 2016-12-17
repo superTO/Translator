@@ -61,6 +61,10 @@ Route::get('admin/edit/{user}', 'AdminController@edit');
 
 Route::patch('admin/finish/{user}', 'AdminController@finish');
 
+Route::get('admin/disable/{user}', 'AdminController@disable');
+
+Route::get('admin/enable/{user}', 'AdminController@enable');
+
 
 Auth::routes();
 

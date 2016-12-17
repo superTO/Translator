@@ -125,14 +125,6 @@
                                     <button type="submit" class="btn btn-primary">
                                         Finish
                                     </button>
-
-                                    <button type="submit" class="btn btn-primary">
-                                        Disable
-                                    </button>
-
-                                    <button type="submit" class="btn btn-primary">
-                                        Enable
-                                    </button>
                                 </div>
                             </div>
                         </form>
