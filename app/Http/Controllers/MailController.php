@@ -32,6 +32,6 @@ class MailController extends Controller
 	    
         Mail::to(Input::get('email'))->send($email);
         */
-        return back();
+        return redirect('user');
 	}
 }
