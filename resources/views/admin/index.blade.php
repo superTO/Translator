@@ -46,7 +46,6 @@
                     <th>Account</th>
                     <th>Phone Number</th>
                     <th>E-mail</th>
-
                 </tr>
                 </thead>
                 <tbody>
