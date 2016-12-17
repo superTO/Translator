@@ -127,11 +127,11 @@
                                     </button>
 
                                     <button type="submit" class="btn btn-primary">
-                                        Enable
+                                        Disable
                                     </button>
 
                                     <button type="submit" class="btn btn-primary">
-                                        Disable
+                                        Enable
                                     </button>
                                 </div>
                             </div>
