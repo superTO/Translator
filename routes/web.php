@@ -30,13 +30,11 @@ Route::get('upload',function(){
     return view ('user.upload');
 });
 
-Route::get('trans',function(){
-    return view ('trans.trans');
-});
+Route::get('trans','DocumentController@showDocument');
 
-Route::get('/trans/detail/{document}','DocumentController@showDetail');
+Route::get('/trans/detail/{document}','TranslatorController@showDetail');
 
-Route::get('/trans/detail/edit/{document}','DocumentController@showEdit');
+Route::get('/trans/detail/edit/{document}','TranslatorController@showEdit');
 
 Route::get('pm',function(){
     return view ('pm.pm');
