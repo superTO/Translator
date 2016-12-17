@@ -1,6 +1,5 @@
 <?php
 
-Auth::loginUsingId(1);
 
 /*
 |--------------------------------------------------------------------------
@@ -32,11 +31,8 @@ Route::get('upload',function(){
 });
 Route::get('trans','DocumentController@showDocument');
 
-<<<<<<< HEAD
-=======
 Route::get('trans','DocumentController@showDocument');
 
->>>>>>> 9c3f29679c56d2e91131f04f075c588d2e26cc29
 Route::get('/trans/detail/{document}','TranslatorController@showDetail');
 
 Route::get('/trans/detail/edit/{document}','TranslatorController@showEdit');
