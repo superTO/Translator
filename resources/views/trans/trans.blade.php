@@ -48,62 +48,16 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>1,001</td>
-                    <td>Lorem</td>
-                    <td>Non-processing</td>
-                    <td>dolor</td>
-                    <td>dolor</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>1,002</td>
-                    <td>amet</td>
-                    <td>Un-paid</td>
-                    <td>adipiscing</td>
-                    <td>adipiscing</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>1,003</td>
-                    <td>Integer</td>
-                    <td>Translating</td>
-                    <td>odio</td>
-                    <td>odio</td>
-                    <td><a href="/detail">Details</a></td>
-                </tr>
-                <tr>
-                    <td>1,003</td>
-                    <td>libero</td>
-                    <td>1st-Proofreading</td>
-                    <td>cursus</td>
-                    <td>cursus</td>
-                    <td><a href="/detail">Details</a></td>
-                </tr>
-                <tr>
-                    <td>1,004</td>
-                    <td>dapibus</td>
-                    <td>2nd-Proofreading</td>
-                    <td>Sed</td>
-                    <td>Sed</td>
-                    <td><a href="/detail">Details</a></td>
-                </tr>
-                <tr>
-                    <td>1,005</td>
-                    <td>Nulla</td>
-                    <td>3rd-Proofreading</td>
-                    <td>sem</td>
-                    <td>sem</td>
-                    <td><a href="/detail">Details</a></td>
-                </tr>
-                <tr>
-                    <td>1,005</td>
-                    <td>Nulla</td>
-                    <td>Finish</td>
-                    <td>sem</td>
-                    <td>sem</td>
-                    <td><a href="/detail">Details</a></td>
-                </tr>
+               @foreach($documents as $docu)
+                  <tr>
+                        <td> {{$docu->id}} </td>
+                        <td> {{$docu->document_name}} </td>
+                        <td> {{$docu->translation_type}} </td>
+                        <td> {{$docu->due_date}} </td>
+                        <td> {{$docu->translator1_id }} </td>
+                        <td><a href="trans/detail/{{$docu->id}}">Edit</a></td>
+                 </tr>
+               @endforeach
 
 
                 </tbody>
