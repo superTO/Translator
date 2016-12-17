@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\document;
 class TranslatorController extends Controller
 {
     public function translatorpage(){
@@ -13,6 +13,13 @@ class TranslatorController extends Controller
 											 ->orWhere('translator4_id',translator_login_id)
 											 ->get();
 	    return view('Translatorview',compact('translatiion_doc'));
-
 	}
+	public function showDetail(document $document)
+    {
+        return view('trans.detail',compact('document'));
+    }
+    public function showEdit(document $document)
+    {
+        return view('trans.edit',compact('document'));
+    }
 }

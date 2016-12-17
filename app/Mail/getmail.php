@@ -12,7 +12,7 @@ class getmail extends Mailable
 {
     use Queueable, SerializesModels;
     
-    public $user;
+    public $document;
     
     /**
      * Create a new message instance.
@@ -22,7 +22,7 @@ class getmail extends Mailable
     
     public function __construct()
     {
-        //$this->user = $user;
+        //$this->document_name = $document;
     }
 
     /**
