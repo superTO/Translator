@@ -31,11 +31,13 @@ Route::get('upload',function(){
 });
 Route::get('trans','DocumentController@showDocument');
 
-Route::get('trans','DocumentController@showDocument');
 
 Route::get('/trans/detail/{document}','TranslatorController@showDetail');
 
 Route::get('/trans/detail/edit/{document}','TranslatorController@showEdit');
+
+Route::post('/trans/upload','DocumentController@uploadFile');
+
 
 Route::get('pm',function(){
     return view ('pm.pm');
@@ -77,6 +79,4 @@ Route::post('fileHelp',function(){
     $file = request()->file('uploaddocument');
     $ext = $file->guessClientExtension();
     return $file->storeAs('user' . auth()->id(),"file.{$ext}");
-    
-    
 });
