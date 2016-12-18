@@ -13,7 +13,7 @@ composer install
     
 2.有關於.env檔的設定:
 
-將.env.example 改成 .env
+將.env.example 「複製一份」把他改成 .env
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
