@@ -59,7 +59,7 @@ Route::get('assign',function(){
 
 Route::get('admin/index', 'AdminController@index');
 
-Route::get('admin/edit/{user}', 'AdminController@edit');
+Route::get('admin/more/{user}', 'AdminController@more');
 
 Route::patch('admin/finish/{user}', 'AdminController@finish');
 
