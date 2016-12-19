@@ -50,6 +50,7 @@ DB_PASSWORD=secret <-改成你的MySQL密碼
 * account ->　user 帳號
 * password -> user 密碼
 * name -> user 名子／公司名稱
+* email ->　user 信箱
 * role -> 各權限請參照下方「資料表的權限說明」
 * phone_number -> user 電話號碼
 * ssn ->　身分證字號／公司行號
