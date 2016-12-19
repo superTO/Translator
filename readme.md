@@ -117,6 +117,14 @@ DB_PASSWORD=secret <-改成你的MySQL密碼
     3 -> 其他
     
     ```
+#　建立SuperAdmin測試帳號
+```
+php artisan db:seed --class=UsersTableSeederAdmin
+執行以上指令後就可以用以下資訊登錄
+帳號:admin
+密碼:adminPassword
+```
+*ps:當Login功能寫好就能測試了
 
 # Laravel PHP Framework
 
