@@ -18,7 +18,27 @@
                                 <label for="role" class="col-md-4 control-label">Permission</label>
 
                                 <div class="col-md-6">
-                                    <input id="role" type="text" class="form-control" name="role" value="{{ $user->role }}" readonly required autofocus>
+                                    <select name="role" class="form-control">
+                                        @for($i = 1; $i<4; $i++)
+                                            @if($user->role === $i)
+                                                @if($i === 1)
+                                                    <option value=1 selected>User</option>
+                                                @elseif($i === 2)
+                                                    <option value=2 selected>PM</option>
+                                                @elseif($i === 3)
+                                                    <option value=3 selected>Translator</option>
+                                                @endif
+                                            @else
+                                                @if($i === 1)
+                                                    <option value=1>User</option>
+                                                @elseif($i === 2)
+                                                    <option value=2>PM</option>
+                                                @elseif($i === 3)
+                                                    <option value=3>Translator</option>
+                                                @endif
+                                            @endif
+                                        @endfor
+                                    </select>
 
                                     @if ($errors->has('role'))
                                         <span class="help-block">

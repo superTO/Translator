@@ -22,7 +22,7 @@ class AdminController extends Controller
 
     public function finish(Request $request,User $user)
     {
-        //$user->update($request->all());
+        $user->update($request->all());
 
         return redirect('/admin/index');
     }
