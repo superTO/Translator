@@ -38,6 +38,11 @@ Route::get('/trans/detail/edit/{document}','TranslatorController@showEdit');
 
 Route::post('/trans/upload','DocumentController@uploadFile');
 
+Route::get('/trans_','DocumentController@searchFile');
+
+Route::get('trans/detail/{document}/Original_Down','DocumentController@downloadOriginalFile');
+Route::get('trans/detail/{document}/Current_Down','DocumentController@downloadCurrentFile');
+
 
 Route::get('pm',function(){
     return view ('pm.pm');

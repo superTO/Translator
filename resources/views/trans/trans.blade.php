@@ -12,7 +12,7 @@
 
         <div class="container">
             <div class="col-lg-4">
-                <legend><h1>File List</h1> </legend>
+                <legend><h1><a href="/trans">File List</a></h1></legend>
             </div>
 
             <div class="col-lg-8">
@@ -23,13 +23,12 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-md-offset-3">
-                        <form action="" class="search-form">
-                            <div class="form-group has-feedback">
-                                <label for="search" class="sr-only">Search</label>
+                             <form  action="/trans_" method="get" class="search-form" role="search" > 
+                                <div class="form-group has-feedback">
                                 <input type="text" class="form-control" name="search" id="search" placeholder="search">
-                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                            </div>
-                        </form>
+                                 <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                                </div>
+                               </form>  
                     </div>
                 </div>
             </div>
