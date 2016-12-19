@@ -105,6 +105,17 @@ DB_PASSWORD=secret <-改成你的MySQL密碼
     1 -> 已付款
     
     ```
+* document_type(暫定):
+    ```
+    0 -> 學術
+    
+    1 -> 法律
+    
+    2 -> 體育
+    
+    3 -> 其他
+    
+    ```
 
 # Laravel PHP Framework
 
