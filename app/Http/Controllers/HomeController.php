@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $id = Auth::user();
+        if($id->role === 0)
+            return redirect('/admin/index') ;
+        elseif($id->role === 1)
+            return redirect('/user');
+        elseif ($id->role === 2)
+            return redirect('/pm');
+        elseif ($id->role === 3)
+            return redirect('/trans');
+
     }
 }
