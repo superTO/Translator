@@ -13,11 +13,10 @@ class DocumentController extends Controller
     	$documents=document::all();
     	return view ('trans.trans',compact('documents'));
     }
-    public function uploadFile(Request $request)
+    public function uploadFile(Request $request,document $document)
     {
         //$this->validate($request,['document'=>'required']);
-        $docu=$request->file('docu');
-        $docu_name='New_'.$docu->getClientOriginalName();
+        $docu_name='New_'.$document->text_name;
         $request->file('docu')->storeAS('Documents',$docu_name);
         return back();
     }
@@ -25,21 +24,19 @@ class DocumentController extends Controller
     {
         $keyword=$request->input('search');
         $documents=DB::table('documents')->where('document_name','LIKE',"%$keyword%")->get();
-        
         //orwhere('');
         return view('trans.trans',compact('documents'));
     }
     public function downloadCurrentFile(document $document)
     {
-        //
-        /*$docu_name='New_'.$document->document_name;
-        $path=storage_path("app\documents\\".$docu_name);
-        //return $path;
-        //$headers=['Content-Type: application/pdf'];
-        return response()->download($path,$docu_name,$headers);*/
+        $docu_name='New_'.$document->text_name;
+        $path=storage_path("app\Documents\\".$docu_name);
+        return response()->download($path);
     }
-    public function downloadOriginFile(document $document)
+    public function downloadOriginalFile(document $document)
     {
-              //
+        $docu_name=$document->text_name;
+        $path=storage_path("app\Documents\\".$docu_name);
+        return response()->download($path);
     }
 }

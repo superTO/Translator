@@ -82,7 +82,7 @@
                 </form>
                 <div class="form-group">
                      <legend>File Upload</legend>
-                    <form method="POST" action="/trans/upload" enctype="multipart/form-data">
+                    <form method="POST" action="/trans/upload/{{$document->id}}" enctype="multipart/form-data">
                                {{ csrf_field() }}
                         <input type="file"  class="form-control-file" name="docu" id="exampleInputFile" aria-describedby="fileHelp">
                        <button bype="submit">Submit</button>

@@ -47,11 +47,11 @@
             <div class="form-group  ">
             <div>
                 <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
-                <a href="{{$document->id}}/Original_Down"><button type="button" class="btn btn-link">Download Original File</button></a>
+                <a href="{{$document->id}}/Original_Download"><button type="button" class="btn btn-link">Download Original File</button></a>
             </div>
             <div>
                 <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
-                <a href="{{$document->id}}/Current_Down"><button type="button" class="btn btn-link">Download Current-updated File</button></a>
+                <a href="{{$document->id}}/Current_Download"><button type="button" class="btn btn-link">Download Current-updated File</button></a>
             </div>
             </div>
             <div class="form-group  ">

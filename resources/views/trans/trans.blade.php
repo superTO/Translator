@@ -12,7 +12,7 @@
 
         <div class="container">
             <div class="col-lg-4">
-                <legend><h1><a href="/trans">File List</a></h1></legend>
+                <legend><h1><a href="/trans/index">File List</a></h1></legend>
             </div>
 
             <div class="col-lg-8">
@@ -54,7 +54,7 @@
                         <td> {{$docu->translation_type}} </td>
                         <td> {{$docu->due_date}} </td>
                         <td> {{$docu->translator1_id }} </td>
-                        <td><a href="trans/detail/{{$docu->id}}">Edit</a></td>
+                        <td><a href="/trans/detail/{{$docu->id}}">Edit</a></td>
                  </tr>
                @endforeach
 
