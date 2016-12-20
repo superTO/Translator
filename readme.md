@@ -120,6 +120,7 @@ DB_PASSWORD=secret <-改成你的MySQL密碼
 
 # 建立SuperAdmin測試帳號
 ```
+php artisan make:seeder UsersTableSeederAdmin
 php artisan db:seed --class=UsersTableSeederAdmin
 
 執行以上指令後就可以用以下資訊登錄
