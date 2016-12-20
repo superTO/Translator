@@ -130,7 +130,8 @@ php artisan db:seed --class=UsersTableSeederAdmin
 *ps:當Login功能寫好就能測試了
 
 # 測試mail發送
-要先去mailtrap 用github登入
+```
+要先去mailtrap,用github登入
 Create inbox
 然後將
 Username:
@@ -139,3 +140,4 @@ Password:
 MAIL_USERNAME=
 MAIL_PASSWORD=
 即可寄信囉
+```
