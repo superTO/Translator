@@ -72,6 +72,8 @@ Route::get('admin/disable/{user}', 'AdminController@disable');
 
 Route::get('admin/enable/{user}', 'AdminController@enable');
 
+Route::get('/admin_','AdminController@searchAccount');
+
 
 Auth::routes();
 

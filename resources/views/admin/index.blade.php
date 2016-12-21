@@ -13,7 +13,7 @@
 
         <div class="container">
             <div class="col-lg-4">
-                <legend><h1>Account List </h1></legend>
+                <legend><h1><a href="/admin/index">Account List</a></h1></legend>
             </div>
 
             <div class="col-lg-8">
@@ -24,10 +24,9 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-md-offset-3">
-                        <form action="" class="search-form">
+                        <form action="/admin_" method="get" class="search-form" role="search">
                             <div class="form-group has-feedback">
-                                <label for="search" class="sr-only">Search</label>
-                                <input type="text" class="form-control" name="search" id="search" placeholder="search">
+                                <input type="text" class="form-control" name="search" id="search" placeholder="Search by Account">
                                 <span class="glyphicon glyphicon-search form-control-feedback"></span>
                             </div>
                         </form>
