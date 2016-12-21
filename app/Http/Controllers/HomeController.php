@@ -25,6 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
+        if(Auth::guest())
+            return redirect('/');
         $id = Auth::user();
         if($id->role === 0)
             return redirect('/admin/index') ;

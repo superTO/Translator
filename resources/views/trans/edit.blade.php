@@ -2,7 +2,6 @@
 
 @section('bar_element')
     <li><a href="{{ url('/trans') }}">My Account</a></li>
-    <li><a href="{{ url('/') }}">Logout</a></li>
 @endsection
 
 @section('content')
@@ -114,7 +113,7 @@
                     <form method="POST" action="/trans/upload/{{$document->id}}" enctype="multipart/form-data">
                                {{ csrf_field() }}
                         <input type="file"  class="form-control-file" name="docu" id="exampleInputFile" aria-describedby="fileHelp">
-                       <button bype="submit">Submit</button>
+                       <button type="submit">Submit</button>
                         <small  id="fileHelp" class="form-text text-muted">Notice : The file's type should be doc or docx. ; The size should be .smaller than 25MB.</small>
                     </form>
                      @if(count($errors))

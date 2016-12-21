@@ -2,7 +2,6 @@
 
 @section('bar_element')
     <li><a href="{{ url('/trans') }}">My Account</a></li>
-    <li><a href="{{ url('/') }}">Logout</a></li>
 @endsection
 
 @section('content')
