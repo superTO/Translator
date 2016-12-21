@@ -46,7 +46,8 @@ class AdminController extends Controller
     public function searchAccount(Request $request)
     {
         $keyword = $request->input('search');
-        $ids = \DB::table('users')->where('account','LIKE',"%$keyword%")->get();
+        //$ids = User::table('users')->where('account','LIKE',"%$keyword%")->get();
+        $ids = User::searchUser($keyword)->get();
 
         return view('admin.index',compact('ids'));
     }
