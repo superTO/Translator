@@ -5,6 +5,16 @@
     <li><a href="{{ url('/') }}">Logout</a></li>
 @endsection
 
+@section('content')    
+{!!Form::open(array('action'=>array('PMcontroller@Updatedatabase')))!!}
+<div class="form-group">
+{!!Form::label('translator_id','Select a translator')!!}
+{!!Form::slect('translator_id',$translator,null,['class'=>'form-control']!!)}
+</div>
+{!!Form::close()!!}   
+@endsection
+
+
 @section('content')
     <div class="col-lg-4"></div>
     <div class="col-lg-4">

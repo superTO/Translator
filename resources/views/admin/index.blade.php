@@ -13,18 +13,18 @@
 
         <div class="container">
             <div class="col-lg-4">
-                <legend><h1>Account List </h1></legend>
+                <legend><h1><a href="/admin/index">Account List</a></h1></legend>
             </div>
 
             <div class="col-lg-8">
                 <div class="row">
                     <div class="col-md-6 col-md-offset-4">
-                        <h4>Search Account</h4>
+                        <h4>Search User</h4>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-md-offset-3">
-                        <form action="" class="search-form">
+                        <form action="/admin_" method="get" class="search-form" role="search">
                             <div class="form-group has-feedback">
                                 <label for="search" class="sr-only">Search</label>
                                 <input type="text" class="form-control" name="search" id="search" placeholder="search">
@@ -43,6 +43,12 @@
                     <th>ID</th>
                     <th>Name</th>
                     <th>Role</th>
+                    <select name="role" class="form-control" onchange="javascript:location.href=this.value;">
+                        <option>-------- Choose a role --------</option>
+                        <option value="index_Users">Users</option>
+                        <option value="index_PM">PM</option>
+                        <option value="index_Translators">Translators</option>
+                    </select>
                     <th>Account</th>
                     <th>Phone Number</th>
                 </tr>

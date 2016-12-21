@@ -13,4 +13,18 @@ class PMcontroller extends Controller
 	    return view('PMview',compact('case_not_handle'));
 
 	}
+	public function Dropdownlistcreat()
+	{
+		$translator=DB::talbe('users')->where('role',3)->list('name','id');
+		return  view()->with('users',$translator);
+	}
+	public function Updatedatabase()
+	{
+		$translator_id = Input::get('translator_id');
+		//unknow document_id
+		DB::table('documents ')->where('id','document_id')
+		                       ->update(['translator1_id'=>translator_id]);
+    
+	}
+	
 }

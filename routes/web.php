@@ -64,6 +64,10 @@ Route::get('assign',function(){
 
 Route::get('admin/index', 'AdminController@index');
 
+Route::get('admin/index_Users', 'AdminController@UserIndex');
+Route::get('admin/index_PM', 'AdminController@PMIndex');
+Route::get('admin/index_Translators', 'AdminController@TranslatorIndex');
+
 Route::get('admin/more/{user}', 'AdminController@more');
 
 Route::patch('admin/finish/{user}', 'AdminController@finish');
@@ -71,6 +75,8 @@ Route::patch('admin/finish/{user}', 'AdminController@finish');
 Route::get('admin/disable/{user}', 'AdminController@disable');
 
 Route::get('admin/enable/{user}', 'AdminController@enable');
+
+Route::get('/admin_','AdminController@searchAccount');
 
 
 Auth::routes();
