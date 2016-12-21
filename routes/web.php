@@ -38,7 +38,7 @@ Route::get('/trans/detail/edit/{document}','TranslatorController@showEdit');
 
 Route::post('/trans/upload/{document}','DocumentController@uploadFile');
 
-Route::get('/trans_','DocumentController@searchFile');
+Route::get('/trans/index_','DocumentController@searchFile');
 
 Route::get('/trans/detail/{document}/Original_Download','DocumentController@downloadOriginalFile');
 Route::get('/trans/detail/{document}/Current_Download','DocumentController@downloadCurrentFile');

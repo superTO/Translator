@@ -23,7 +23,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-md-offset-3">
-                             <form  action="/trans_" method="get" class="search-form" role="search" > 
+                             <form  action="/trans/index" method="get" class="search-form" role="search" > 
                                 <div class="form-group has-feedback">
                                 <input type="text" class="form-control" name="search" id="search" placeholder="search">
                                  <span class="glyphicon glyphicon-search form-control-feedback"></span>
@@ -48,14 +48,47 @@
                 </thead>
                 <tbody>
                @foreach($documents as $docu)
+                  @if(($docu->translator1_id==$id->role) ||($docu->translator2_id==$id->role)||($docu->translator3_id==$id->role)||($docu->translator4_id==$id->role))
                   <tr>
                         <td> {{$docu->id}} </td>
                         <td> {{$docu->document_name}} </td>
-                        <td> {{$docu->translation_type}} </td>
+                        <td> @if($docu->translation_type==0)
+                                  Initial state
+                              @elseif($docu->translator_type==1)
+                                   First proofreading
+                              @elseif($docu->translator_type==2)
+                                   Second proofreading
+                              @elseif($docu->translator_type==3)
+                                    third proofreading
+                              @elseif($docu->translator_type==4)
+                                    Finished
+                              @endif
+
+
+                        </td>
                         <td> {{$docu->due_date}} </td>
-                        <td> {{$docu->translator1_id }} </td>
-                        <td><a href="/trans/detail/{{$docu->id}}">Edit</a></td>
+                        <td>    @if($docu->translator1)
+                                       <li>{{ $docu->translator1->name }}</li>
+                                @endif
+                                      
+                                @if ($docu->translator2)
+
+                                      <li>{{$docu->translator2->name}}</li>
+
+                                @endif
+                                @if ($docu->translator3)
+                                           
+                                        <li>{{$docu->translator3->name}}</li>
+                                @endif
+                                @if ($docu->translator4)
+                                          
+                                        <li>{{$docu->translator4->name}}</li>
+                                @endif
+                                
+                        </td>
+                        <td><a href="/trans/detail/{{$docu->id}}">Edit</a></td>            
                  </tr>
+                 @endif
                @endforeach
 
 

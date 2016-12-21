@@ -33,7 +33,7 @@ class HomeController extends Controller
         elseif ($id->role === 2)
             return redirect('/pm');
         elseif ($id->role === 3)
-            return redirect('/trans');
+            return redirect('/trans/index');
 
     }
 }

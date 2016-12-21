@@ -16,11 +16,29 @@
             </div>
             <div class="form-group ">
                 <label for="disabledTextInput">Status</label>
-                <p>{{$document->translation_type}}</p>
+                <p>@if($document->translation_type==0)
+                                  Initial state
+                    @elseif($document->translator_type==1)
+                                   First proofreading
+                    @elseif($document->translator_type==2)
+                                   Second proofreading
+                    @elseif($document->translator_type==3)
+                                    third proofreading
+                    @elseif($document->translator_type==4)
+                                    Finished
+                    @endif</p>
             </div>
             <div class="form-group  ">
                 <label for="disabledTextInput">Article type</label>
-                <p>{{$document->document_type}}</p>
+                <p>@if($document->document_type==0)
+                          Academic
+                     @elseif($document->document_type==1)
+                           Law 
+                     @elseif($document->document_type==2)
+                           Sports
+                     @else
+                           others
+                     @endif</p>
             </div>
 
             <div class="form-group  ">
@@ -39,7 +57,18 @@
 
             <div class="form-group  ">
                 <label for="disabledTextInput">Responsor</label>
-                <p>{{$document->translator1_id}}</p>
+                <p>@if($document->translator1)
+                         {{ $document->translator1->name }}
+                    @endif
+                    @if ($document->translator2)
+                         {{$document->translator2->name}}
+                    @endif
+                    @if ($document->translator3)
+                        {{$document->translator3->name}}
+                    @endif
+                    @if ($document->translator4)
+                        {{$document->translator4->name}}
+                    @endif</p>
             </div>
         </div>
 

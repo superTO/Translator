@@ -16,10 +16,18 @@ class TranslatorController extends Controller
 	}
 	public function showDetail(document $document)
     {
+        $document=$document->load('translator1');
+        $document=$document->load('translator2');
+        $document=$document->load('translator3');
+        $document=$document->load('translator4');
         return view('trans.detail',compact('document'));
     }
     public function showEdit(document $document)
     {
+        $document=$document->load('translator1');
+        $document=$document->load('translator2');
+        $document=$document->load('translator3');
+        $document=$document->load('translator4');
         return view('trans.edit',compact('document'));
     }
 }
