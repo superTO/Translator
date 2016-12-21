@@ -15,6 +15,27 @@ class AdminController extends Controller
         return view('admin.index', compact('ids'));
     }
 
+    public function UserIndex()
+    {
+        $ids = \DB::table('users')->where('role',"1")->get();
+
+        return view('admin.index', compact('ids'));
+    }
+
+    public function PMIndex()
+    {
+        $ids = \DB::table('users')->where('role',"2")->get();
+
+        return view('admin.index', compact('ids'));
+    }
+
+    public function TranslatorIndex()
+    {
+        $ids = \DB::table('users')->where('role',"3")->get();
+
+        return view('admin.index', compact('ids'));
+    }
+
     public function more(User $user)
     {
         return view('admin.more',compact('user'));
@@ -46,7 +67,6 @@ class AdminController extends Controller
     public function searchAccount(Request $request)
     {
         $keyword = $request->input('search');
-        //$ids = User::table('users')->where('account','LIKE',"%$keyword%")->get();
         $ids = User::searchUser($keyword)->get();
 
         return view('admin.index',compact('ids'));

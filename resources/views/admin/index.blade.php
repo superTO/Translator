@@ -43,6 +43,12 @@
                     <th>ID</th>
                     <th>Name</th>
                     <th>Role</th>
+                    <select name="role" class="form-control" onchange="javascript:location.href=this.value;">
+                        <option>-------- Choose a role --------</option>
+                        <option value="index_Users">Users</option>
+                        <option value="index_PM">PM</option>
+                        <option value="index_Translators">Translators</option>
+                    </select>
                     <th>Account</th>
                     <th>Phone Number</th>
                 </tr>
