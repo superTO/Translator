@@ -15,9 +15,9 @@ class AdminController extends Controller
         return view('admin.index', compact('ids'));
     }
 
-    public function edit(User $user)
+    public function more(User $user)
     {
-        return view('admin.edit',compact('user'));
+        return view('admin.more',compact('user'));
     }
 
     public function finish(Request $request,User $user)

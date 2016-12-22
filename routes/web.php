@@ -29,13 +29,20 @@ Route::get('user',function(){
 Route::get('upload',function(){
     return view ('user.upload');
 });
-Route::get('trans','DocumentController@showDocument');
+Route::get('trans/index','DocumentController@showDocument');
 
-Route::get('trans','DocumentController@showDocument');
 
-Route::get('/trans/detail/{document}','TranslatorController@showDetail');
+Route::get('trans/detail/{document}','TranslatorController@showDetail');
 
 Route::get('/trans/detail/edit/{document}','TranslatorController@showEdit');
+
+Route::post('/trans/upload/{document}','DocumentController@uploadFile');
+
+Route::get('/trans_','DocumentController@searchFile');
+
+Route::get('/trans/detail/{document}/Original_Download','DocumentController@downloadOriginalFile');
+Route::get('/trans/detail/{document}/Current_Download','DocumentController@downloadCurrentFile');
+
 
 Route::get('pm',function(){
     return view ('pm.pm');
@@ -57,7 +64,7 @@ Route::get('assign',function(){
 
 Route::get('admin/index', 'AdminController@index');
 
-Route::get('admin/edit/{user}', 'AdminController@edit');
+Route::get('admin/more/{user}', 'AdminController@more');
 
 Route::patch('admin/finish/{user}', 'AdminController@finish');
 
@@ -77,6 +84,4 @@ Route::post('fileHelp',function(){
     $file = request()->file('uploaddocument');
     $ext = $file->guessClientExtension();
     return $file->storeAs('user' . auth()->id(),"file.{$ext}");
-    
-    
 });
