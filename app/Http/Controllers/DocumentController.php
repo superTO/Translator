@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\document;
 use Validator;
 use DB;
-
 use Auth;
 use app\User;
 class DocumentController extends Controller
