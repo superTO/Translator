@@ -25,6 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
+        if(Auth::guest())
+            return redirect('/');
         $id = Auth::user();
         if($id->role === 0)
             return redirect('/admin/index') ;
@@ -33,7 +35,7 @@ class HomeController extends Controller
         elseif ($id->role === 2)
             return redirect('/pm');
         elseif ($id->role === 3)
-            return redirect('/trans');
+            return redirect('/trans/index');
 
     }
 }

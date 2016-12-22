@@ -1,7 +1,6 @@
 @extends('layouts.for_user')
 
 @section('bar_element')
-    <li><a href="{{ url('/') }}">Logout</a></li>
 @endsection
 
 @section('content')
@@ -135,7 +134,7 @@
                             <div class="form-group">
                                 <div class="col-md-6 col-md-offset-4">
                                     <button type="submit" class="btn btn-primary">
-                                        Back
+                                        Submit
                                     </button>
                                 </div>
                             </div>
