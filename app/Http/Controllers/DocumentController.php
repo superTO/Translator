@@ -19,15 +19,20 @@ class DocumentController extends Controller
          $documents=$documents->load('translator3');
          $documents=$documents->load('translator4'); //return $trans1_id=document::all()->translator1_id;
         //dd($documents);
-    	return view ('trans.trans',compact('documents','user','id'));
+        echo $documents;
+    	return view ('trans.trans',compact('documents','id'));
     }
     public function uploadFile(Request $request,document $document)
     {
+        DB::table('documents')->where('id',$document->id)
+                            ->update(['translation_type' => $request->optionsRadios]);
+
+
         $rules=["documents"=>'required|mimes:docx,doc|max:25000'];
         $this->validate($request,$rules);
         $docu_name='New_'.$document->text_name;
         $request->file('documents')->storeAS('Documents',$docu_name);
-        return back();
+        return redirect('/trans/index');
     }
     public function searchFile(Request $request)
     {

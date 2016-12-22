@@ -1,7 +1,6 @@
 @extends('layouts.for_user')
 
 @section('bar_element')
-    <li><a href="{{ url('/') }}">Logout</a></li>
 @endsection
 
 @section('content')
@@ -48,7 +47,7 @@
                 </thead>
                 <tbody>
                @foreach($documents as $docu)
-                 @if(($docu->translator1_id==$id->role) ||($docu->translator2_id==$id->role)||($docu->translator3_id==$id->role)||($docu->translator4_id==$id->role))
+                 @if(($docu->translator1_id==$id->id) ||($docu->translator2_id==$id->id)||($docu->translator3_id==$id->id)||($docu->translator4_id==$id->id))
                   <tr>
                         <td> {{$docu->id}} </td>
                         <td> {{$docu->document_name}} </td>
