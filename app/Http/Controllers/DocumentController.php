@@ -13,20 +13,13 @@ class DocumentController extends Controller
     public function showDocument()
     {
     	$id = Auth::user();
-         $documents=document::all();
-        $documents=$documents->load('translator1');
-         $documents=$documents->load('translator2');
-         $documents=$documents->load('translator3');
-         $documents=$documents->load('translator4'); //return $trans1_id=document::all()->translator1_id;
-        //dd($documents);
+         $documents=document::with('translator1','translator2','translator3','translator4')->get();
     	return view ('trans.trans',compact('documents','id'));
     }
     public function uploadFile(Request $request,document $document)
     {
         DB::table('documents')->where('id',$document->id)
                             ->update(['translation_type' => $request->optionsRadios]);
-
-
         $rules=["documents"=>'required|mimes:docx,doc|max:25000'];
         $this->validate($request,$rules);
         $docu_name='New_'.$document->text_name;
@@ -35,14 +28,9 @@ class DocumentController extends Controller
     }
     public function searchFile(Request $request)
     {
-         $id = Auth::user();
+        $id = Auth::user();
         $keyword=$request->input('search');
-          $documents1=DB::table('documents')->where('document_name','LIKE',"%$keyword%")->get();
-          dd($documents1);
-          /*$documents2=$documents2->load('translator1');
-          $documents2=$documents2->load('translator2');
-          $documents2=$documents2->load('translator3');
-          $documents2=$documents2->load('translator4');*/
+        $documents=document::with('translator1','translator2','translator3','translator4')->where('document_name','LIKE',"%$keyword%")->get();
         return view('trans.trans',compact('documents','id'));
     }
     public function downloadCurrentFile(document $document)
