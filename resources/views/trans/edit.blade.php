@@ -18,11 +18,11 @@
                 <p>@if($document->translation_type==0)
                                   Initial state
                     @elseif($document->translator_type==1)
-                                   First proofreading
+                                   1st-Proofreading
                     @elseif($document->translator_type==2)
-                                   Second proofreading
+                                   2nd-proofreading
                     @elseif($document->translator_type==3)
-                                    third proofreading
+                                    3rd-proofreading
                     @elseif($document->translator_type==4)
                                     Finished
                     @endif</p>
@@ -84,7 +84,7 @@
                     </div>
                     <div class="form-check">
                         <label class="form-check-label">
-                         <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+                         <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="1">
                             1st-Proofreading
                         </label>
                     </div>
@@ -102,7 +102,7 @@
                     </div>
                     <div class="form-check">
                         <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="0" checked>
                             Finish
                         </label>
                     </div>
@@ -112,7 +112,7 @@
                      <legend>File Upload</legend>
                     <form method="POST" action="/trans/upload/{{$document->id}}" enctype="multipart/form-data">
                                {{ csrf_field() }}
-                        <input type="file"  class="form-control-file" name="docu" id="exampleInputFile" aria-describedby="fileHelp">
+                        <input type="file"  class="form-control-file" name="documents" id="exampleInputFile" aria-describedby="fileHelp">
                        <button type="submit">Submit</button>
                         <small  id="fileHelp" class="form-text text-muted">Notice : The file's type should be doc or docx. ; The size should be .smaller than 25MB.</small>
                     </form>

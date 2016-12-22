@@ -1,6 +1,7 @@
 @extends('layouts.for_user')
 
 @section('bar_element')
+    <li><a href="{{ url('/') }}">Logout</a></li>
 @endsection
 
 @section('content')
@@ -22,7 +23,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-md-offset-3">
-                             <form  action="/trans/index" method="get" class="search-form" role="search" > 
+                             <form  action="/trans/index_" method="get" class="search-form" role="search" > 
                                 <div class="form-group has-feedback">
                                 <input type="text" class="form-control" name="search" id="search" placeholder="search">
                                  <span class="glyphicon glyphicon-search form-control-feedback"></span>
@@ -47,7 +48,7 @@
                 </thead>
                 <tbody>
                @foreach($documents as $docu)
-                  @if(($docu->translator1_id==$id->role) ||($docu->translator2_id==$id->role)||($docu->translator3_id==$id->role)||($docu->translator4_id==$id->role))
+                 @if(($docu->translator1_id==$id->role) ||($docu->translator2_id==$id->role)||($docu->translator3_id==$id->role)||($docu->translator4_id==$id->role))
                   <tr>
                         <td> {{$docu->id}} </td>
                         <td> {{$docu->document_name}} </td>
@@ -87,10 +88,9 @@
                         </td>
                         <td><a href="/trans/detail/{{$docu->id}}">Edit</a></td>            
                  </tr>
-                 @endif
+                  @endif
                @endforeach
-
-
+               
                 </tbody>
             </table>
         </div>
