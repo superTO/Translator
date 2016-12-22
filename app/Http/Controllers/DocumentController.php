@@ -19,7 +19,6 @@ class DocumentController extends Controller
          $documents=$documents->load('translator3');
          $documents=$documents->load('translator4'); //return $trans1_id=document::all()->translator1_id;
         //dd($documents);
-        echo $documents;
     	return view ('trans.trans',compact('documents','id'));
     }
     public function uploadFile(Request $request,document $document)
