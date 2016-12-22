@@ -87,9 +87,9 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('testmail','MailController@uploadmail');  //test mail
 
-Route::post('fileHelp',function(){
-    //request()->file('uploaddocument')->store('userID');
-    $file = request()->file('uploaddocument');
-    $ext = $file->guessClientExtension();
-    return $file->storeAs('user' . auth()->id(),"file.{$ext}");
-});
+// Route::post('fileHelp',function(){
+//     //request()->file('uploaddocument')->store('userID');
+//     $file = request()->file('uploaddocument');
+//     $ext = $file->guessClientExtension();
+//     return $file->storeAs('user' . auth()->id(),"file.{$ext}");
+// });

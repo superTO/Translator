@@ -72,8 +72,9 @@
                     I agree the terms of service
                 </label>
             </div>
-            <!--<button type="submit" class="btn btn-primary">Submit</button>-->
+            
             <a href="{{action('MailController@uploadmail')}}" type="submit" class="btn btn-primary">Submit</a>
+            <!--<button type="submit" class="btn btn-primary">Submit</button>-->
         </form>
     </div>
     <div class="col-lg-3"></div>
