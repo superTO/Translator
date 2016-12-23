@@ -44,9 +44,9 @@
                     <th>@lang('admin.role')</th>
                     <select name="role" class="form-control" onchange="javascript:location.href=this.value;">
                         <option>@lang('admin.choose_a_role')</option>
-                        <option value="index_Users">@lang('admin.users')</option>
-                        <option value="index_PM">@lang('admin.pm')</option>
-                        <option value="index_Translators">@lang('admin.translators')</option>
+                        <option value="/admin/index_Users">@lang('admin.users')</option>
+                        <option value="/admin/index_PM">@lang('admin.pm')</option>
+                        <option value="/admin/index_Translators">@lang('admin.translators')</option>
                     </select>
                     <th>@lang('admin.account')</th>
                     <th>@lang('admin.phone number')</th>
