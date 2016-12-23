@@ -10,7 +10,7 @@ class document extends Model
         'id','document_name', 'text_name', 'due_date', 
         'original_language', 'translated_language','document_type','uploader_user_id',
         'translation_type','translator1_id','translator2_id','translator3_id','translator4_id',
-        'payment_type','remark',
+        'payment_type','remark'
     ];
     
     
