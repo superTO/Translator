@@ -134,7 +134,7 @@ php artisan db:seed --class=UsersTableSeederAdmin
 # 測試mail發送
 ```
 要先去mailtrap,用github登入
-Create inbox
+點選跳轉業面後的 Demo inbox
 然後將
 Username:
 Password:
