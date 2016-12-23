@@ -18,8 +18,8 @@ Route::get('/', function () {
 });
 
 
-Route::get('about',function(){
-    return view ('pages.about');
+Route::get('about', function () {
+    return view('pages.about');
 });
 
 
@@ -36,6 +36,11 @@ Route::group(['middleware' => ['auth', 'lang']], function () {
         Route::get('upload', function () {
             return view('user.upload');
         });
+
+        Route::get('user/index', 'DocumentController@showDocument');
+
+
+        Route::get('user/detail/{document}', 'TranslatorController@showDetail');
     });
 
     Route::group(['middleware' => 'trans'], function () {
@@ -102,7 +107,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('testmail','MailController@uploadmail');  //test mail
+Route::post('testmail', 'MailController@uploadmail');  //test mail
 
 // Route::post('fileHelp',function(){
 //     //request()->file('uploaddocument')->store('userID');
