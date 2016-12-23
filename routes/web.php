@@ -118,10 +118,7 @@ Route::group(['middleware' => 'lang' ], function () {
     Auth::routes();
 });
 
-<<<<<<< HEAD
 
-=======
->>>>>>> a55be80019a04faf680d8c0fcc939ee23c3ea94f
 
 Route::get('/home', 'HomeController@index');
 
