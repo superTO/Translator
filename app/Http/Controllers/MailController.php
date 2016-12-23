@@ -6,18 +6,18 @@ use Illuminate\Http\Request;
 use App\Mail\getmail;
 use Mail;
 use App\User;
+use App\document;
 
 
 class MailController extends Controller
 {
-        
-    public function validator(array $document){
+    public function validator(document $document){
 		return Validator::make($document, [
             'filename' => 'required|max:255',
         ]);
 	}
 	
-	public function uploadmail(array $document)
+	public function uploadmail(document $document)
 	{
 	    
 	    //$email = new getmail(User::where('Name', $entry->Name)->firstOrFail());
