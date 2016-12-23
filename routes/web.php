@@ -113,9 +113,10 @@ Route::group(['middleware' => 'lang' ], function () {
             Route::get('/admin_', 'AdminController@searchAccount');
         });
     });
+    Auth::routes();
 });
 
-Auth::routes();
+
 
 Route::get('/home', 'HomeController@index');
 

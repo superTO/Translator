@@ -10,34 +10,34 @@
     <div class="container col-lg-6">
         <div class="col-lg-6">
             <div class="form-group ">
-                <label for="disabledTextInput">File Name</label>
+                <label for="disabledTextInput">@lang('pm.Filename')</label>
                 <p>12377777456</p>
             </div>
             <div class="form-group ">
-                <label for="disabledTextInput">Status</label>
+                <label for="disabledTextInput">@lang('pm.Status')</label>
                 <p>123456</p>
             </div>
             <div class="form-group  ">
-                <label for="disabledTextInput">Artical type</label>
+                <label for="disabledTextInput">@lang('pm.Artical type')</label>
                 <p>123456</p>
             </div>
 
             <div class="form-group  ">
-                <label for="disabledTextInput">Expected Date</label>
+                <label for="disabledTextInput">@lang('pm.Expected Day')</label>
                 <p>123456</p>
             </div>
 
             <div class="form-group">
-                <label for="disabledTextInput">Original Language</label>
+                <label for="disabledTextInput">@lang('pm.Ori-lang')</label>
                 <p>123456</p>
             </div>
             <div class="form-group">
-                <label for="disabledTextInput">Translated Language</label>
+                <label for="disabledTextInput">@lang('pm.Trans-lang')</label>
                 <p>123456</p>
             </div>
 
             <div class="form-group  ">
-                <label for="disabledTextInput">Responsor</label>
+                <label for="disabledTextInput">@lang('pm.Owner')</label>
                 <p>123456</p>
             </div>
         </div>
@@ -46,26 +46,26 @@
             <div class="form-group  ">
                 <div>
                     <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
-                    <button type="button" class="btn btn-link">Download Original File</button>
+                    <button type="button" class="btn btn-link">@lang('pm.Download')</button>
                 </div>
             </div>
             @if ($branch===1)
             <div class="form-group  ">
-                <a href="/valuation"><button type="button" class="btn btn-primary btn-lg btn-block">Valuation</button></a>
-                <small id="fileHelp" class="form-text text-muted">Notice : If you are not responsor of this status, DON'T EDIT IT!!!
+                <a href="/valuation"><button type="button" class="btn btn-primary btn-lg btn-block">@lang('pm.Valuation')</button></a>
+                <small id="fileHelp" class="form-text text-muted">@lang('pm.Notice')
                 </small>
             </div>
             @elseif($branch===2)
                 <div class="form-group  ">
-                    <a href="/assign"><button type="button" class="btn btn-primary btn-lg btn-block">assign</button></a>
-                    <small id="fileHelp" class="form-text text-muted">Notice : If you are not responsor of this status, DON'T EDIT IT!!!
+                    <a href="/assign"><button type="button" class="btn btn-primary btn-lg btn-block">@lang('pm.assign')</button></a>
+                    <small id="fileHelp" class="form-text text-muted">@lang('pm.Notice')
                     </small>
                 </div>
 
             @else
                 <div>
                     <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
-                    <button type="button" class="btn btn-link">Download Current-updated File</button>
+                    <button type="button" class="btn btn-link">@lang('pm.Download')</button>
                 </div>
             @endif
 
