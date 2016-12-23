@@ -8,7 +8,9 @@
 
     <div class="col-lg-3"></div>
     <div class="container col-lg-6">
-        <form>
+        <form method="POST" action="/user/upload" enctype="multipart/form-data" >
+            {{ csrf_field() }}
+            
             <div class="form-group " >
                 <label>File Name</label>
                 <input type="text" class="form-control" name="filename" placeholder="Enter filename" value="123456">

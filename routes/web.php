@@ -34,6 +34,11 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('upload', function () {
             return view('user.upload');
         });
+        Route::get('user/index', 'DocumentController@showDocument');
+
+
+        Route::get('user/detail/{document}', 'TranslatorController@showDetail');
+
     });
 
     Route::group(['middleware' => 'trans'], function () {
