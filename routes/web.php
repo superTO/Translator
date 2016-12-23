@@ -36,25 +36,25 @@ Route::group(['middleware' => 'lang' ], function () {
 
         Route::group(['middleware' => 'user'], function () {
 
-            Route::get('user', function () {
-                return view('user.user');
-            });
+            /* Route::get('user', function () {
+                 return view('user.user');
+             });
+           */
 
-            Route::get('upload', function () {
+
+            Route::get('user', 'DocumentController@showuserDocument');
+            Route::get('user/upload', function () {
                 return view('user.upload');
             });
 
-            //Route::get('user/index', 'DocumentController@showDocument');
-
-
-            //Route::get('user/detail/{document}', 'TranslatorController@showDetail');
+            // Route::get('user/detail/{document}', 'TranslatorController@showDetail');
         });
 
         /************************************/
 
         Route::group(['middleware' => 'trans'], function () {
 
-            Route::get('trans/index', 'DocumentController@showDocument');
+            Route::get('trans/index', 'DocumentController@showtransDocument');
 
 
             Route::get('trans/detail/{document}', 'TranslatorController@showDetail');

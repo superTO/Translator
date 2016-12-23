@@ -15,7 +15,7 @@ return [
     'Name' => 'Name',
     'Status' => 'Status',
     'Expected_Date' =>'Expected Date',
-    'Responsor' => 'Responsor',
+    'Responsor' => 'Owner',
     'Details' => 'Details',
     'Article_type' =>'Article type',
     'Original_Language' => 'Original Language',

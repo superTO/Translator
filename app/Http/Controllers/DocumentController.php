@@ -10,11 +10,17 @@ use Auth;
 use App\User;
 class DocumentController extends Controller
 {
-    public function showDocument()
+    public function showtransDocument()
     {
-    	$id = Auth::user();
-         $documents=document::with('translator1','translator2','translator3','translator4')->get();
-    	return view ('trans.trans',compact('documents','id'));
+        $id = Auth::user();
+        $documents=document::with('translator1','translator2','translator3','translator4')->get();
+        return view ('trans.trans',compact('documents','id'));
+    }
+    public function showuserDocument()
+    {
+        $id = Auth::user();
+        $documents=document::with('translator1','translator2','translator3','translator4')->get();
+        return view ('user.user',compact('documents','id'));
     }
     public function uploadFile(Request $request,document $document)
     {
