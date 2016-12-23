@@ -71,12 +71,14 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ url('/lang/set/en') }}">English</a></li>
+                                <li><a href="{{ url('/lang/set/zh_tw') }}">繁體中文</a></li>
                                 @yield('bar_element')
                                 <li>
                                     <a href="{{ url('/logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        Logout
+                                        @lang('auth.logout')
                                     </a>
 
                                     <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">

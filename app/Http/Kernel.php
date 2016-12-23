@@ -56,6 +56,7 @@ class Kernel extends HttpKernel
         'pm' => \App\Http\Middleware\PMCheck::class,
         'user' => \App\Http\Middleware\UserCheck::class,
         'trans' => \App\Http\Middleware\TransCheck::class,
+        'lang' => \App\Http\Middleware\LangMiddleware::class,
 
     ];
 }
