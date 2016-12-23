@@ -46,6 +46,12 @@ Route::group(['middleware' => 'lang' ], function () {
             Route::get('user/upload', function () {
                 return view('user.upload');
             });
+            
+            Route::post('userdocument', function(){
+               request()->file('file_input')->store('userdocument');
+               
+               return back();
+            });
 
             // Route::get('user/detail/{document}', 'TranslatorController@showDetail');
         });
