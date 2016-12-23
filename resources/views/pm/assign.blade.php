@@ -1,8 +1,7 @@
 @extends('layouts.for_user')
 
 @section('bar_element')
-    <li><a href="{{ url('/pm') }}">My Account</a></li>
-    <li><a href="{{ url('/') }}">Logout</a></li>
+    <li><a href="{{ url('/pm') }}">@lang('pm.My account')</a></li>
 @endsection
 
 @section('content')
