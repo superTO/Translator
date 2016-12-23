@@ -11,13 +11,13 @@
 
         <div class="container">
             <div class="col-lg-4">
-                <legend><h1><a href="/trans/index">File List</a></h1></legend>
+                <legend><h1><a href="/trans/index">@lang('trans.File_List')</a></h1></legend>
             </div>
 
             <div class="col-lg-8">
                 <div class="row">
                     <div class="col-md-6 col-md-offset-4">
-                        <h4>Search File</h4>
+                        <h4>@lang('trans.Search_File')</h4>
                     </div>
                 </div>
                 <div class="row">
@@ -37,12 +37,12 @@
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th>Number</th>
-                    <th>Name</th>
-                    <th>status</th>
-                    <th>Expected Date</th>
-                    <th>Responsor</th>
-                    <th>Details</th>
+                    <th>@lang('trans.Number')</th>
+                    <th>@lang('trans.Name')</th>
+                    <th>@lang('trans.Status')</th>
+                    <th>@lang('trans.Expected_Date')</th>
+                    <th>@lang('trans.Responsor')</th>
+                    <th>@lang('trans.Details')</th>
                 </tr>
                 </thead>
                 <tbody>

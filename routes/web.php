@@ -13,16 +13,18 @@
 */
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-
-Route::get('about', function () {
-    return view('pages.about');
-});
 
 Route::group(['middleware' => 'lang' ], function () {
+
+    Route::get('/', function () {
+        return view('welcome');
+    });
+
+
+    Route::get('about', function () {
+        return view('pages.about');
+    });
 
     Route::get('/lang/set/{lang}', 'LanguageController@set_lang');
 
@@ -42,10 +44,10 @@ Route::group(['middleware' => 'lang' ], function () {
                 return view('user.upload');
             });
 
-            Route::get('user/index', 'DocumentController@showDocument');
+           # Route::get('user/index', 'DocumentController@showDocument');
 
 
-            Route::get('user/detail/{document}', 'TranslatorController@showDetail');
+            #Route::get('user/detail/{document}', 'TranslatorController@showDetail');
         });
 
         /************************************/
@@ -113,9 +115,10 @@ Route::group(['middleware' => 'lang' ], function () {
             Route::get('/admin_', 'AdminController@searchAccount');
         });
     });
+    Auth::routes();
 });
 
-Auth::routes();
+
 
 Route::get('/home', 'HomeController@index');
 
