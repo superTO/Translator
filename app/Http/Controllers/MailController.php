@@ -23,7 +23,7 @@ class MailController extends Controller
         ]);
 	}
 	
-	public function uploadmail(document $document)
+	public function uploadmail(document $document,User $user)
 	{
 	    
 	    //$email = new getmail(User::where('Name', $entry->Name)->firstOrFail());
@@ -51,7 +51,8 @@ class MailController extends Controller
             'document_type' => $document['artical_type'],
             'original_language' => $document['ori_language'],
             'translated_language' => $document['trans_language'],
-            'text_name' => $document['file_input']
+            'text_name' => $document['file_input'],
+            'upload_user_id ' => $document['{{$user->id}}']
             ]);
         
         return redirect('user');
