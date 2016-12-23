@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Mail\getmail;
+use Validator;
 use Mail;
 use App\User;
 use App\document;
@@ -14,6 +15,11 @@ class MailController extends Controller
     public function validator(document $document){
 		return Validator::make($document, [
             'filename' => 'required|max:255',
+            'data' => 'required',
+            //'artical_type' => 'required',
+            'ori_language' => 'required',
+            'trans_language' => 'required',
+            'file_input' => 'required',
         ]);
 	}
 	
@@ -38,8 +44,8 @@ class MailController extends Controller
         
         
         
-        /*return redirect('user');*/
-        return document::uploadmail([
+        
+        document::create([
             'document_name' => $document['filename'],
             'due_date' => $document['date'],
             'document_type' => $document['artical_type'],
@@ -47,5 +53,7 @@ class MailController extends Controller
             'translated_language' => $document['trans_language'],
             'text_name' => $document['file_input']
             ]);
+        
+        return redirect('user');
 	}
 }

@@ -17,7 +17,7 @@
             </div>
             <div class="form-group  ">
                 <label>@lang('user.Artical type')</label>
-                <input type="text" class="form-control" name="artical type" placeholder="Enter filename" value="123456">
+                <input type="text" class="form-control" name="artical type" placeholder="remark" value="123456">
             </div>
 
             <div class="form-group  ">
