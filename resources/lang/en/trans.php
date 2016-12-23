@@ -28,7 +28,7 @@ return [
     'Finish' => 'Finish',
     'File_Upload' =>'File Upload',
     'Submit' =>'Submit',
-    'Notice' =>'Notice : The file\'s type should be doc or docx. 
+    'Notice_e' =>'Notice : The file\'s type should be doc or docx. 
                         The size should be smaller than 25MB.',
     'Download_Original_File'=>'Download Original File',
     'Download_Current-updated_File' => 'Download Current-updated File',

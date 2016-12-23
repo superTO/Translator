@@ -121,7 +121,7 @@
                            aria-describedby="fileHelp">
                     <button type="submit">@lang('trans.Submit')</button>
                     <small id="fileHelp" class="form-text text-muted">
-                        @lang('trans.Notice')
+                        @lang('trans.Notice_e')
                     </small>
 
                     @if(count($errors))

@@ -29,7 +29,7 @@ return [
     'Finish' => '完成',
     'File_Upload' =>'檔案上傳',
     'Submit' =>'傳送',
-    'Notice' => '注意：檔案須為doc或者docx. 檔案大小須小於25MB',
+    'Notice_e' => '注意：檔案須為doc或者docx. 檔案大小須小於25MB',
     'Download_Original_File' => '下載原始檔案',
     'Download_Current-updated_File' =>'下載修改中的檔案',
     'Edit_the_file' => '修改檔案狀態',
