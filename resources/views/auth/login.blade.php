@@ -11,6 +11,7 @@
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('account') ? ' has-error' : '' }}">
+
                             <label for="account" class="col-md-4 control-label">@lang('login.Login')</label>
 
                             <div class="col-md-6">
