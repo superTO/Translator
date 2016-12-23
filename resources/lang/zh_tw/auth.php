@@ -15,6 +15,4 @@ return [
 
     'failed' => 'These credentials do not match our records.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-    'account' => '帳戶',
-    'fileList' => '檔案列表',
 ];

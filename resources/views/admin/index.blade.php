@@ -12,7 +12,7 @@
 
         <div class="container">
             <div class="col-lg-4">
-                <legend><h1><a href="/admin/index">Account List</a></h1></legend>
+                <legend><h1><a href="/admin/index">@lang('admin.Account_List')</a></h1></legend>
             </div>
 
             <div class="col-lg-8">

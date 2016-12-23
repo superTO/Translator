@@ -71,6 +71,8 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ url('/lang/set/en') }}">English</a></li>
+                                <li><a href="{{ url('/lang/set/zh_tw') }}">繁體中文</a></li>
                                 @yield('bar_element')
                                 <li>
                                     <a href="{{ url('/logout') }}"
