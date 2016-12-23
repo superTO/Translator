@@ -26,16 +26,6 @@ class MailController extends Controller
 	    
 	    //$date = Carbon::now()->addMinutes(15);
         //Queue::later($date, 'PMemail@example.com',$email);
-        return document::create([
-            'document_name' => $document['filename'],
-            'due_date' => $document['date'],
-            'document_type' => $document['artical_type'],
-            'original_language' => $document['ori_language'],
-            'translated_language' => $document['trans_language'],
-            'text_name' => $document['file_input'],
-            ]);
-        
-	    
         
         //send email if you in this page
         /*
@@ -48,6 +38,14 @@ class MailController extends Controller
         
         
         
-        return redirect('user');
+        /*return redirect('user');*/
+        return document::uploadmail([
+            'document_name' => $document['filename'],
+            'due_date' => $document['date'],
+            'document_type' => $document['artical_type'],
+            'original_language' => $document['ori_language'],
+            'translated_language' => $document['trans_language'],
+            'text_name' => $document['file_input']
+            ]);
 	}
 }

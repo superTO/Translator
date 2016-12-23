@@ -38,6 +38,12 @@ Route::group(['middleware' => 'auth'], function () {
 
 
         Route::get('user/detail/{document}', 'TranslatorController@showDetail');
+        
+        Route::post('userdocument', function () {
+            request()->file('file_input')->store('userdocument');
+            
+            return back();
+        });
 
     });
 
