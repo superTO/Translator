@@ -12,7 +12,7 @@
 
                         <div class="form-group{{ $errors->has('account') ? ' has-error' : '' }}">
 
-                            <label for="account" class="col-md-4 control-label">@lang('login.Login')</label>
+                            <label for="account" class="col-md-4 control-label">@lang('login.Account')</label>
 
                             <div class="col-md-6">
                                 <input id="account" type="account" class="form-control" name="account" value="{{ old('account') }}" required autofocus>
