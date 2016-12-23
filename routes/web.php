@@ -105,7 +105,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('testmail','MailController@uploadmail');  //test mail
+Route::post('testmail','MailController@uploadmail');  //test mail
 
 // Route::post('fileHelp',function(){
 //     //request()->file('uploaddocument')->store('userID');
