@@ -70,6 +70,7 @@ DB_PASSWORD=secret <-改成你的MySQL密碼
 * translator3_id ->　第三位翻譯者其id(可空)
 * translator4_id ->　第四位翻譯者其id(可空)
 * payment_type -> 付費情況(未付、已付)
+* remark -> user自己打的備註
 
 # 資料表的權限說明:
 ##資料表 users:
