@@ -21,9 +21,6 @@ class MailController extends Controller
 	    //$date = Carbon::now()->addMinutes(15);
         //Queue::later($date, 'PMemail@example.com',$email);
         
-        $email = new getmail();
-        Mail::to('PMemail@example.com')->queue($email);
-        
 	    
         
         //send email if you in this page
@@ -32,6 +29,11 @@ class MailController extends Controller
 	    
         Mail::to(Input::get('email'))->send($email);
         */
+        $email = new getmail();
+        Mail::to('PMemail@example.com')->queue($email);
+        
+        
+        
         return redirect('user');
 	}
 }
