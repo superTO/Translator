@@ -9,8 +9,10 @@ class document extends Model
     public $timestamps = false;
     
     protected $fillable = [
-        'filename', 'file_input', 'date', 
-        'ori_language', 'trans_language','artical_type',
+        'document_name', 'text_name', 'due_date', 
+        'original_language', 'translated_language','document_type',
+        'upload_user_id','remark','translator1_id','translator2_id',
+        'translator3_id','translator4_id','payment_type'
     ];
     
     
