@@ -12,23 +12,23 @@
             {{ csrf_field() }}
             
             <div class="form-group " >
-                <label>File Name</label>
+                <label>@lang('user.Filename')</label>
                 <input type="text" class="form-control" name="filename" placeholder="Enter filename" value="123456">
             </div>
             <div class="form-group  ">
-                <label>Artical type</label>
+                <label>@lang('user.Artical type')</label>
                 <input type="text" class="form-control" name="artical type" placeholder="Enter filename" value="123456">
             </div>
 
             <div class="form-group  ">
-                <label>Expected Date</label>
+                <label>@lang('user.Expected Day')</label>
                 <div>
                     <input class="form-control" type="date" name="data" value="2016-12-11" id="example-date-input">
                 </div>
             </div>
 
             <div class="form-group col-lg-6">
-                <label>Original Language</label>
+                <label>@lang('user.Ori-lang')</label>
                 <select name="ori_language" class="form-control" id="exampleSelect1">
                     <option>English</option>
                     <option>Traditional Chinese</option>
@@ -41,7 +41,7 @@
                 </select>
             </div>
             <div class="form-group col-lg-6">
-                <label>Translated Language</label>
+                <label>@lang('user.Trans-lang')</label>
                 <select name="trans_language" class="form-control" id="exampleSelect1">
                     <option>English</option>
                     <option>Traditional Chinese</option>
@@ -56,22 +56,22 @@
 
 
             <div class="form-group">
-                <label>File input</label>
+                <label>@lang('user.Fileinput')</label>
                 <input name="file_input" type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
 
-                <small id="fileHelp" class="form-text text-muted">Notice : The file's type should be doc or docx. ; The size should be smaller than 25MB.
+                <small id="fileHelp" class="form-text text-muted">@lang('user.Notice')
                 </small>
             </div>
 
             <div class="form-check">
                 <label class="form-check-label">
                     <input name="check" type="checkbox" class="form-check-input">
-                    I agree the terms of service
+                    @lang('user.Serve')
                 </label>
             </div>
             
             <!--<a href="{{action('MailController@uploadmail')}}" type="submit" class="btn btn-primary">Submit</a>-->
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">@lang('user.Submit')</button>
         </form>
     </div>
     <div class="col-lg-3"></div>

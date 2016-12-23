@@ -13,4 +13,15 @@ return [
     'Owner' => 'Owner',
     'Details' => 'Details',
     'Edit' => 'Edit',
+    'Upload' => 'Upload',
+
+    'Filename' => 'File Name',
+    'Artical type' => 'Artical Type',
+    'Ori-lang' => 'Origin Language',
+    'Trans-lang' => 'Translated Language',
+    'Expected Day' => 'Expected Day',
+    'Submit' => 'Submit',
+    'Fileinput' => 'File input',
+    'Notice' => 'Notice : The file\'s type should be doc or docx. ; The size should be smaller than 25MB.',
+    'Serve' => ' I agree the terms of service',
 ];
