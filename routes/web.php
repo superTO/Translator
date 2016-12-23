@@ -13,16 +13,18 @@
 */
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-
-Route::get('about', function () {
-    return view('pages.about');
-});
 
 Route::group(['middleware' => 'lang' ], function () {
+
+    Route::get('/', function () {
+        return view('welcome');
+    });
+
+
+    Route::get('about', function () {
+        return view('pages.about');
+    });
 
     Route::get('/lang/set/{lang}', 'LanguageController@set_lang');
 
@@ -120,9 +122,9 @@ Route::group(['middleware' => 'lang' ], function () {
         });
     });
     Auth::routes();
-
-
 });
+
+
 
 Route::get('/home', 'HomeController@index');
 

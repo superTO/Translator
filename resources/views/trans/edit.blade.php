@@ -10,11 +10,11 @@
     <div class="container col-lg-6">
         <div class="col-lg-6">
             <div class="form-group ">
-                <label for="disabledTextInput">File Name</label>
+                <label for="disabledTextInput">@lang('trans.File_Name')</label>
                 <p>{{$document->document_name}}</p>
             </div>
             <div class="form-group ">
-                <label for="disabledTextInput">Status</label>
+                <label for="disabledTextInput">@lang('trans.Status')</label>
                 <p>@if($document->translation_type==0)
                         Initial state
                     @elseif($document->translator_type==1)
@@ -28,7 +28,7 @@
                     @endif</p>
             </div>
             <div class="form-group  ">
-                <label for="disabledTextInput">Article type</label>
+                <label for="disabledTextInput">@lang('trans.Article_type')</label>
                 <p>@if($document->document_type==0)
                         Academic
                     @elseif($document->document_type==1)
@@ -41,21 +41,21 @@
             </div>
 
             <div class="form-group  ">
-                <label for="disabledTextInput">Expected Date</label>
+                <label for="disabledTextInput">@lang('trans.Expected_Date')</label>
                 <p>{{$document->due_date}}</p>
             </div>
 
             <div class="form-group">
-                <label for="disabledTextInput">Original Language</label>
+                <label for="disabledTextInput">@lang('trans.Original_Language')</label>
                 <p>{{$document->original_language}}</p>
             </div>
             <div class="form-group">
-                <label for="disabledTextInput">Translated Language</label>
+                <label for="disabledTextInput">@lang('trans.Translated_Language')</label>
                 <p>{{$document->translated_language}}</p>
             </div>
 
             <div class="form-group  ">
-                <label for="disabledTextInput">Responsor</label>
+                <label for="disabledTextInput">@lang('trans.Responsor')</label>
                 <p>@if($document->translator1)
                         {{ $document->translator1->name }}
                     @endif
@@ -76,52 +76,52 @@
             <form method="POST" action="/trans/upload/{{$document->id}}" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <fieldset class="form-group">
-                    <legend>Modify file status</legend>
+                    <legend>@lang('trans.Modify_file_status')</legend>
                     <div class="form-check">
                         <label class="form-check-label">
                             <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios"
                                    value="0" >
-                            Translating
+                            @lang('trans.Translating')
                         </label>
                     </div>
                     <div class="form-check">
                         <label class="form-check-label">
                             <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios"
                                    value="1">
-                            1st-Proofreading
+                            @lang('trans.1st-Proofreading')
                         </label>
                     </div>
                     <div class="form-check">
                         <label class="form-check-label">
                             <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios"
                                    value="2" >
-                            2nd-Proofreading
+                            @lang('trans.2nd-Proofreading')
                         </label>
                     </div>
                     <div class="form-check">
                         <label class="form-check-label">
                             <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios"
                                    value="3" >
-                            3rd-Proofreading
+                           @lang('trans.3rd-Proofreading')
                         </label>
                     </div>
                     <div class="form-check">
                         <label class="form-check-label">
                             <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios"
                                    value="4" >
-                            Finish
+                            @lang('trans.Finish')
                         </label>
                     </div>
                 </fieldset>
 
                 <div class="form-group">
-                    <legend>File Upload</legend>
+                    <legend>@lang('trans.File_Upload')</legend>
 
                     <input type="file" class="form-control-file" name="documents" id="exampleInputFile"
                            aria-describedby="fileHelp">
-                    <button type="submit">Submit</button>
-                    <small id="fileHelp" class="form-text text-muted">Notice : The file's type should be doc or docx. ;
-                        The size should be .smaller than 25MB.
+                    <button type="submit">@lang('trans.Submit')</button>
+                    <small id="fileHelp" class="form-text text-muted">
+                        @lang('trans.Notice_e')
                     </small>
 
                     @if(count($errors))

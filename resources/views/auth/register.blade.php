@@ -5,13 +5,13 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
+                <div class="panel-heading">@lang('register.Register')</div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Name/Company Name</label>
+                            <label for="name" class="col-md-4 control-label">@lang('register.Name')</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
@@ -26,7 +26,7 @@
 
 
                         <div class="form-group{{ $errors->has('account') ? ' has-error' : '' }}">
-                            <label for="account" class="col-md-4 control-label">Account</label>
+                            <label for="account" class="col-md-4 control-label">@lang('register.Account')</label>
 
                             <div class="col-md-6">
                                 <input id="account" type="account" class="form-control" name="account" value="{{ old('account') }}" required>
@@ -40,7 +40,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
+                            <label for="password" class="col-md-4 control-label">@lang('register.Password')</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control" name="password" required>
@@ -54,7 +54,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
+                            <label for="password-confirm" class="col-md-4 control-label">@lang('register.Confirm')</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
@@ -62,7 +62,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('id_number') ? ' has-error' : '' }}">
-                            <label for="id_number" class="col-md-4 control-label">ID Number/Uniform Numbers</label>
+                            <label for="id_number" class="col-md-4 control-label">@lang('register.ID Number')</label>
 
                             <div class="col-md-6">
                                 <input id="id_number" type="id_number" class="form-control" name="id_number" value="{{ old('id_number') }}" required>
@@ -76,7 +76,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
-                            <label for="phone" class="col-md-4 control-label">Phone Number</label>
+                            <label for="phone" class="col-md-4 control-label">@lang('register.Phone')</label>
 
                             <div class="col-md-6">
                                 <input id="phone" type="phone" class="form-control" name="phone" value="{{ old('phone') }}" required>
@@ -90,7 +90,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                            <label for="email" class="col-md-4 control-label">@lang('register.E-mail')</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
@@ -106,7 +106,7 @@
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    Register
+                                    @lang('register.Register')
                                 </button>
                             </div>
                         </div>

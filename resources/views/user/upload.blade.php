@@ -17,12 +17,7 @@
             </div>
             <div class="form-group  ">
                 <label>Artical type</label>
-                <select name="artical_type" class="form-control" id="exampleSelect1">
-                    <option>announcement</option>
-                    <option>Regulations</option>
-                    <option>Academic</option>
-                    <option>Other</option>
-                </select>
+                <input type="text" class="form-control" name="artical type" placeholder="Enter filename" value="123456">
             </div>
 
             <div class="form-group  ">

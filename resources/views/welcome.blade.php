@@ -70,8 +70,8 @@
         <div class="top-right links">
             <a href="{{ url('/lang/set/en') }}">English</a>
             <a href="{{ url('/lang/set/zh_tw') }}">繁體中文</a>
-            <a href="{{ url('/login') }}">Login</a>
-            <a href="{{ url('/register') }}">Register</a>
+            <a href="{{ url('/login') }}">@lang('auth.login')</a>
+            <a href="{{ url('/register') }}">@lang('auth.register')</a>
         </div>
     @else
         <div class="top-right links">
