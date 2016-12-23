@@ -6,12 +6,12 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-     public function userpage(){
-	  $user_doc=DB::table('documents')->where('upload_user_id',user_login_id)
-		    								   ->get();
-	    return view('Userview',compact('user_doc'));
-
-	}
+     public function showDocument()
+    {
+    	$id = Auth::user();
+         $documents=document::with('translator1','translator2','translator3','translator4')->get();
+    	return view ('user',compact('documents','id'));
+    }
 	
 		
 }

@@ -8,7 +8,9 @@
 
     <div class="col-lg-3"></div>
     <div class="container col-lg-6">
-        <form>
+        <form method="POST" action="/testmail" enctype="multipart/form-data" >
+            {{ csrf_field() }}
+            
             <div class="form-group " >
                 <label>File Name</label>
                 <input type="text" class="form-control" name="filename" placeholder="Enter filename" value="123456">
@@ -73,8 +75,8 @@
                 </label>
             </div>
             
-            <a href="{{action('MailController@uploadmail')}}" type="submit" class="btn btn-primary">Submit</a>
-            <!--<button type="submit" class="btn btn-primary">Submit</button>-->
+            <!--<a href="{{action('MailController@uploadmail')}}" type="submit" class="btn btn-primary">Submit</a>-->
+            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
     <div class="col-lg-3"></div>

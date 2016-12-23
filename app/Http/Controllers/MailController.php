@@ -35,9 +35,6 @@ class MailController extends Controller
             'text_name' => $document['file_input'],
             ]);
         
-        $email = new getmail();
-        Mail::to('PMemail@example.com')->queue($email);
-        
 	    
         
         //send email if you in this page
@@ -46,6 +43,11 @@ class MailController extends Controller
 	    
         Mail::to(Input::get('email'))->send($email);
         */
+        $email = new getmail();
+        Mail::to('PMemail@example.com')->queue($email);
+        
+        
+        
         return redirect('user');
 	}
 }
