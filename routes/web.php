@@ -13,18 +13,20 @@
 */
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-
-Route::get('about', function () {
-    return view('pages.about');
-});
 
 Route::group(['middleware' => 'lang' ], function () {
 
     Route::get('/lang/set/{lang}', 'LanguageController@set_lang');
+
+    Route::get('/', function () {
+        return view('welcome');
+    });
+
+
+    Route::get('about', function () {
+        return view('pages.about');
+    });
 
 
     Route::group(['middleware' => 'auth'], function () {
