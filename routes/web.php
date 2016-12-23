@@ -44,10 +44,10 @@ Route::group(['middleware' => 'lang' ], function () {
                 return view('user.upload');
             });
 
-           # Route::get('user/index', 'DocumentController@showDocument');
+            //Route::get('user/index', 'DocumentController@showDocument');
 
 
-            #Route::get('user/detail/{document}', 'TranslatorController@showDetail');
+            //Route::get('user/detail/{document}', 'TranslatorController@showDetail');
         });
 
         /************************************/
@@ -117,7 +117,6 @@ Route::group(['middleware' => 'lang' ], function () {
     });
     Auth::routes();
 });
-
 
 
 Route::get('/home', 'HomeController@index');
