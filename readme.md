@@ -144,4 +144,23 @@ MAIL_PASSWORD=
 即可寄信囉
 ```
 
+#更改前端字串
+```
+由於多語言  前端頁面的字串都變成了 @lang('....')
+顯示的文字是儲存在 
+resourse\lang\en
+resourse\lang\zh_tw
+如果要更改文字要到那兩個資料夾內修改，不要直接改view的東西
+```
+```
+ex. @lang('admin.Account_List')
+對應到 resourse\lang\en\admin.php
+    'Account_List' => 'Account List',
+與 resourse\lang\zh_tw\admin.php
+    'Account_List' => '帳戶列表',
+
+
+
+```
+
 
