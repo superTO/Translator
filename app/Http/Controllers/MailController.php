@@ -25,7 +25,7 @@ class MailController extends Controller
         ]);
 	}
 	
-	public function uploadmail(Request $request,User $user)
+	public function uploadmail(Request $request)
 	{
 	    
 	    //$email = new getmail(User::where('Name', $entry->Name)->firstOrFail());
