@@ -45,8 +45,6 @@ class MailController extends Controller
         $email = new getmail();
         Mail::to('PMemail@example.com')->queue($email);
         
-        
-        
 
         $document = document::create([
             'document_name' => $request['filename'],
@@ -60,7 +58,8 @@ class MailController extends Controller
             'translation_type' => 0,
             'document_type' => 0,
             ]);
-        $docu_name = $document->text_name;
+        $docu_name = $request->file('file_input')->getClientOriginalName();
+        
         $request->file('file_input')->storeAs('Documents',$docu_name);
         
         return redirect('user');
