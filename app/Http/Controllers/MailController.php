@@ -16,10 +16,11 @@ class MailController extends Controller
 		return Validator::make($document, [
             'filename' => 'required|max:255',
             'data' => 'required',
-            //'artical_type' => 'required',
+            //'remark' => 'required',
             'ori_language' => 'required',
             'trans_language' => 'required',
             'file_input' => 'required',
+            'document_type' => 'required'
         ]);
 	}
 	
@@ -48,11 +49,14 @@ class MailController extends Controller
         document::create([
             'document_name' => $document['filename'],
             'due_date' => $document['date'],
-            'document_type' => $document['artical_type'],
+            'remark' => $document['remark'],
             'original_language' => $document['ori_language'],
             'translated_language' => $document['trans_language'],
             'text_name' => $document['file_input'],
-            'upload_user_id' => $document['$user->id']
+            'upload_user_id' => $user->id,
+            'payment_type' => 0,
+            'translation_type' => 0,
+            'document_type' => 0,
             ]);
         
         return redirect('user');
