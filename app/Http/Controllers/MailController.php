@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Mail\getmail;
+use Illuminate\Support\Facades\Auth;
 use Validator;
 use Mail;
 use App\User;
@@ -24,7 +25,7 @@ class MailController extends Controller
         ]);
 	}
 	
-	public function uploadmail(document $document,User $user)
+	public function uploadmail(Request $request,User $user)
 	{
 	    
 	    //$email = new getmail(User::where('Name', $entry->Name)->firstOrFail());
@@ -40,6 +41,7 @@ class MailController extends Controller
 	    
         Mail::to(Input::get('email'))->send($email);
         */
+        $id = Auth::user();
         $email = new getmail();
         Mail::to('PMemail@example.com')->queue($email);
         
@@ -47,13 +49,13 @@ class MailController extends Controller
         
 
         document::create([
-            'document_name' => $document['filename'],
-            'due_date' => $document['date'],
-            'remark' => $document['remark'],
-            'original_language' => $document['ori_language'],
-            'translated_language' => $document['trans_language'],
-            'text_name' => $document['file_input'],
-            'upload_user_id' => $user->id,
+            'document_name' => $request['filename'],
+            'due_date' => $request['date'],
+            'remark' => $request['remark'],
+            'original_language' => $request['ori_language'],
+            'translated_language' => $request['trans_language'],
+            'text_name' => $request['file_input'],
+            'upload_user_id' => $id->id,
             'payment_type' => 0,
             'translation_type' => 0,
             'document_type' => 0,

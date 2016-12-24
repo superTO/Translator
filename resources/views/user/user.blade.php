@@ -1,7 +1,7 @@
 @extends('layouts.for_user')
 
 @section('bar_element')
-    <li><a href="{{ url('user/upload') }}">@lang('user.Upload')</a></li>
+    <li><a href="user/upload/{{ $id->id }}">@lang('user.Upload')</a></li>
 @endsection
 
 @section('content')
