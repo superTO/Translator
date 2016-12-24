@@ -48,7 +48,7 @@ class MailController extends Controller
         
         
 
-        document::create([
+        $document = document::create([
             'document_name' => $request['filename'],
             'due_date' => $request['date'],
             'remark' => $request['remark'],
@@ -60,7 +60,7 @@ class MailController extends Controller
             'translation_type' => 0,
             'document_type' => 0,
             ]);
-        $docu_name = 'New_'.$document->text_name;
+        $docu_name = $document->text_name;
         $request->file('file_input')->storeAs('Documents',$docu_name);
         
         return redirect('user');
