@@ -43,7 +43,7 @@ Route::group(['middleware' => 'lang' ], function () {
 
 
             Route::get('user', 'DocumentController@showuserDocument');
-            Route::get('user/upload/{user}', function (\App\User $user) {
+            Route::get('user/upload', function () {
                 return view('user.upload');
             });
             
