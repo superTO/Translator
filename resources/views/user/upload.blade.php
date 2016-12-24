@@ -23,7 +23,7 @@
             <div class="form-group  ">
                 <label>@lang('user.Expected Day')</label>
                 <div>
-                    <input class="form-control" type="date" name="data" value="2016-12-11" id="example-date-input">
+                    <input class="form-control" type="date" name="date" value="2016-12-11" id="example-date-input">
                 </div>
             </div>
 

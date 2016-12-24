@@ -52,7 +52,7 @@ class MailController extends Controller
             'original_language' => $document['ori_language'],
             'translated_language' => $document['trans_language'],
             'text_name' => $document['file_input'],
-            'upload_user_id ' => $document['{{$user->id}}']
+            'upload_user_id' => $document['$user->id']
             ]);
         
         return redirect('user');
