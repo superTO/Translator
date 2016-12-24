@@ -7,6 +7,7 @@ use App\Mail\getmail;
 use Illuminate\Support\Facades\Auth;
 use Validator;
 use Mail;
+use DB;
 use App\User;
 use App\document;
 
@@ -42,8 +43,10 @@ class MailController extends Controller
         Mail::to(Input::get('email'))->send($email);
         */
         $id = Auth::user();
+        
+        $PMemail = DB::table('users')->where('role', 2 )->value('email');
         $email = new getmail();
-        Mail::to('PMemail@example.com')->queue($email);
+        Mail::to($PMemail)->queue($email);
         
         
         
