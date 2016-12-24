@@ -44,7 +44,7 @@ class MailController extends Controller
         
         
         
-        
+
         document::create([
             'document_name' => $document['filename'],
             'due_date' => $document['date'],
