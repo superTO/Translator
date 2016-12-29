@@ -94,7 +94,7 @@
 
     <div class="content">
         <div class="title m-b-md">
-            Your account is disable!!
+            @lang('login.disabled')
         </div>
         {{--
         <div class="links">
