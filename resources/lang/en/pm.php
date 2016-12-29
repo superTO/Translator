@@ -11,6 +11,7 @@ return [
     'Expected Day' => 'Expected Day',
     'Owner' => 'Owner',
     'Details' => 'Details',
+    'Money' =>'Price',
 
 
     'Filename' => 'File Name',

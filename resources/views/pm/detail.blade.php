@@ -40,6 +40,10 @@
                 <label for="disabledTextInput">@lang('pm.Owner')</label>
                 <p>123456</p>
             </div>
+            <div class="form-group  ">
+                <label for="disabledTextInput">@lang('pm.Money')</label>
+                <p>123456</p>
+            </div>
         </div>
 
         <div class="col-lg-6">

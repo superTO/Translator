@@ -8,7 +8,7 @@
 
     <div class="col-lg-4"></div>
     <div class="col-lg-4">
-        <form>
+        <form action="/pmdetail">
             <div class=" form-group ">
                 <legend><h2>@lang('pm.Accept?')</h2></legend>
                 <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
