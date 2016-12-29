@@ -12,7 +12,7 @@ return [
     'Expected Date' =>'Expected Date',
     'Owner' => 'Owner',
     'Details' => 'Details',
-    'Edit' => 'Edit',
+    'Cancel' => 'Cancel',
     'Upload' => 'Upload',
 
     'Filename' => 'File Name',

@@ -24,12 +24,13 @@ class DocumentController extends Controller
     }
     public function uploadFile(Request $request,document $document)
     {
+        $rules=["documents"=>'required|mimes:docx,doc|max:25000',"optionsRadios"=>'required'];
+        $this->validate($request,$rules);
         DB::table('documents')->where('id',$document->id)
                             ->update(['translation_type' => $request->optionsRadios]);
-        $rules=["documents"=>'required|mimes:docx,doc|max:25000'];
-        $this->validate($request,$rules);
+
         $docu_name='New_'.$document->text_name;
-        $request->file('documents')->storeAS('Documents',$docu_name);
+        $request->file('documents')->storeAs('Documents',$docu_name);
         return redirect('/trans/index');
     }
     public function searchFile(Request $request)

@@ -94,7 +94,7 @@
 
     <div class="content">
         <div class="title m-b-md">
-            Translator
+            Your account is disable!!
         </div>
         {{--
         <div class="links">

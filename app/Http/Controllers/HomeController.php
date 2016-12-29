@@ -36,6 +36,8 @@ class HomeController extends Controller
             return redirect('/pm');
         elseif ($id->role === 3)
             return redirect('/trans/index');
+        else
+            return redirect('/disable');
 
     }
 }

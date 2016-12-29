@@ -19,4 +19,5 @@ return [
     'login' => 'LOGIN',
     'register' => 'REGISTER',
     'logout' => 'Logout',
+    'My_account' =>'My account',
 ];

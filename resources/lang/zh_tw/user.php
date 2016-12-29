@@ -12,7 +12,7 @@ return [
     'Expected Date' =>'期望日期',
     'Owner' => '負責人',
     'Details' => '細節',
-    'Edit' => '編輯',
+    'Cancel' => '取消',
     'Upload' => '上傳',
 
     'Filename' => '檔案名稱',
