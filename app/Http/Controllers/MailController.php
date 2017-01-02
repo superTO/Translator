@@ -34,10 +34,9 @@ class MailController extends Controller
         $email = new getmail();
         Mail::to($PMemail)->queue($email);
 
-        $docu_name = $request->file('file_input')->getClientOriginalName();
+        $docu_name = sprintf('%s-%s.%s', md5(microtime(true)), str_random(8), $request->file('file_input')->guessExtension());
 
-        $request->file('file_input')->storeAs('Documents',$docu_name);
-
+        $request->file('file_input')->storeAs('Documents', $docu_name);
 
         $document = document::create([
             'document_name' => $request['filename'],
