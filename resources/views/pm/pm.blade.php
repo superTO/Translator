@@ -51,7 +51,18 @@
                 @foreach($show_indexs as $show_index)
                     <tr>
                     <td>{{$show_index -> document_name}}</td>
-                    <td>{{$show_index -> translation_type}}</td>
+                    <td> @if($show_index->translation_type==0)
+                            Initial state
+                        @elseif($show_index->translation_type==1)
+                            First proofreading
+                        @elseif($show_index->translation_type==2)
+                            Second proofreading
+                        @elseif($show_index->translation_type==3)
+                            third proofreading
+                        @elseif($show_index->translation_type==4)
+                            Finished
+                        @endif
+                    </td>
                     <td>{{$show_index -> due_date}}</td>
                     <td>{{$show_index -> account}}</td>
                     <td><a href = "detail/{{$show_index ->d_id}}"><span class="glyphicon glyphicon-list" aria-hidden="true"></span></a></td>
