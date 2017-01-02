@@ -35,7 +35,9 @@ class MailController extends Controller
         $PMemail = DB::table('users')->where('role', 2 )->value('email');
         $email = new getmail();
         Mail::to($PMemail)->queue($email);
-        
+        $docu_name = $request->file('file_input')->getClientOriginalName();
+
+        $request->file('file_input')->storeAs('Documents',$docu_name);
 
         $document = document::create([
             'document_name' => $request['filename'],
@@ -43,16 +45,14 @@ class MailController extends Controller
             'remark' => $request['remark'],
             'original_language' => $request['ori_language'],
             'translated_language' => $request['trans_language'],
-            'text_name' => $request['file_input'],
+            'text_name' => $docu_name,
             'upload_user_id' => $id->id,
             'payment_type' => 0,
             'translation_type' => 0,
             'document_type' => 0,
             'money' => 0,
             ]);
-        $docu_name = $request->file('file_input')->getClientOriginalName();
-        
-        $request->file('file_input')->storeAs('Documents',$docu_name);
+
         
         return redirect('user');
 	}
