@@ -39,6 +39,10 @@ Route::group(['middleware' => 'lang'], function () {
                 return view('user.upload');
             });
 
+            Route::get('user/download/{filename}' , ['uses' => 'PMcontroller@download' , 'as' => 'filename']);
+
+            Route::get('user/cancel/{filename}' , ['uses' => 'UserController@cancelDocument' , 'as' => 'filename']);
+
             Route::post('/user', 'MailController@uploadmail');
 
             // Route::get('user/detail/{document}', 'TranslatorController@showDetail');
