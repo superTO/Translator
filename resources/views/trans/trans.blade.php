@@ -52,16 +52,16 @@
                         <td> {{$docu->id}} </td>
                         <td> {{$docu->document_name}} </td>
                         <td> @if($docu->translation_type==0)
-                                  Initial state
-                              @elseif($docu->translator_type==1)
-                                   First proofreading
-                              @elseif($docu->translator_type==2)
-                                   Second proofreading
-                              @elseif($docu->translator_type==3)
-                                    third proofreading
-                              @elseif($docu->translator_type==4)
-                                    Finished
-                              @endif
+                                Initial state
+                            @elseif($docu->translation_type==1)
+                                1st-proofreading
+                            @elseif($docu->translation_type==2)
+                                2nd-proofreading
+                            @elseif($docu->translation_type==3)
+                                3rd-proofreading
+                            @elseif($docu->translation_type==4)
+                                Finished
+                            @endif
 
 
                         </td>

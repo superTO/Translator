@@ -16,15 +16,15 @@
             <div class="form-group ">
                 <label for="disabledTextInput">@lang('trans.Status')</label>
                 <p> @if($document->translation_type==0)
-                                  Initial state
-                    @elseif($document->translator_type==1)
-                                   First proofreading
-                    @elseif($document->translator_type==2)
-                                   Second proofreading
-                    @elseif($document->translator_type==3)
-                                    third proofreading
-                    @elseif($document->translator_type==4)
-                                    Finished
+                        Initial state
+                    @elseif($document->translation_type==1)
+                        1st-proofreading
+                    @elseif($document->translation_type==2)
+                        2nd-proofreading
+                    @elseif($document->translation_type==3)
+                        3rd-proofreading
+                    @elseif($document->translation_type==4)
+                        Finished
                     @endif
                  </p>
             </div>

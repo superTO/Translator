@@ -142,6 +142,8 @@ Password:
 MAIL_USERNAME=
 MAIL_PASSWORD=
 即可寄信囉
+
+PS.要記得弄一個PM權限的帳號 不然撈不到email
 ```
 
 #更改前端字串

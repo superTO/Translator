@@ -46,7 +46,7 @@ Route::group(['middleware' => 'lang' ], function () {
             Route::get('user/upload', function () {
                 return view('user.upload');
             });
-            
+
             Route::post('/user', 'MailController@uploadmail');
 
             // Route::get('user/detail/{document}', 'TranslatorController@showDetail');
@@ -114,13 +114,22 @@ Route::group(['middleware' => 'lang' ], function () {
 
             Route::get('/admin_', 'AdminController@searchAccount');
         });
+
+
+
+
+
+
     });
     Auth::routes();
 });
 
 
-
 Route::get('/home', 'HomeController@index');
+Route::get('disable', function () {
+    return view('disable.disable');
+});
+
 
 Route::post('testmail', 'MailController@uploadmail');  //test mail
 

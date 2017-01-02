@@ -29,19 +29,7 @@ class MailController extends Controller
 	public function uploadmail(Request $request, document $document)
 	{
 	    
-	    //$email = new getmail(User::where('Name', $entry->Name)->firstOrFail());
 	    
-	    //$email = new getmail(new User(['name' => 'fuck']));
-	    
-	    //$date = Carbon::now()->addMinutes(15);
-        //Queue::later($date, 'PMemail@example.com',$email);
-        
-        //send email if you in this page
-        /*
-        $email = new getmail(new App\User(['name' => Input::get('name') ]));
-	    
-        Mail::to(Input::get('email'))->send($email);
-        */
         $id = Auth::user();
         
         $PMemail = DB::table('users')->where('role', 2 )->value('email');
@@ -60,6 +48,7 @@ class MailController extends Controller
             'payment_type' => 0,
             'translation_type' => 0,
             'document_type' => 0,
+            'money' => 0,
             ]);
         $docu_name = $request->file('file_input')->getClientOriginalName();
         

@@ -7,4 +7,5 @@ return [
     'Password' => 'Passward',
     'Remember Me' => 'Remember Me',
     'Forgetpassward' => 'Forget Your Passward?',
+    'disabled' => 'Your Account Has Been Disabled',
 ];

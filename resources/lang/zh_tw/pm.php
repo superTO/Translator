@@ -11,6 +11,7 @@ return [
     'Expected Day' => '期望日期',
     'Owner' => '負責人',
     'Details' => '細節',
+    'Money' =>'價格',
 
     'Filename' => '檔案名稱',
     'Artical type' => '文章類別',

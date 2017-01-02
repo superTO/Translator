@@ -19,5 +19,5 @@ return [
     'login' => '登入',
     'register' => '註冊',
     'logout' => '登出',
-
+    'My_account' =>'我的帳號',
 ];

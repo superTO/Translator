@@ -12,7 +12,7 @@ class document extends Model
         'document_name', 'text_name', 'due_date', 'translation_type',
         'original_language', 'translated_language','document_type',
         'upload_user_id','remark','translator1_id','translator2_id',
-        'translator3_id','translator4_id','payment_type'
+        'translator3_id','translator4_id','payment_type','money',
     ];
     
     
