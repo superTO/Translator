@@ -36,4 +36,6 @@ return [
     '2st-proof' => '2st-Proofreader',
     '3st-proof' => '3st-Proofreader',
     'My account' => 'My account',
+
+    'Remark' => 'Remark',
 ];
