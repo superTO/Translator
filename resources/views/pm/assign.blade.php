@@ -46,6 +46,7 @@
                 </select>
             </div>
             <div>
+            <!--<a href="{{action('PMcontroller@upload')}}" type="submit" class="btn btn-primary">Submit</a>-->
                 <button type="submit" class="btn btn-primary">@lang('pm.Submit')</button>
             </div>
         </form>
