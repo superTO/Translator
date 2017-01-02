@@ -28,11 +28,19 @@ class PMcontroller extends Controller
     }
 
     public function download($filename){
-        $path = storage_path('app\Documents' .$filename);
+        $path = storage_path('app\Documents\\' .$filename);
 //        $path = 'storage/app/Documents' . '/' . $filename;
 
         return response()->download($path);
 
+    }
+
+    public function assign(){
+        $user = DB::table('users')
+            ->get();
+        //dump($user);
+        //exit(0);
+        return view('pm.assign' , compact('user'));
     }
 
     /*public function PMpage(){

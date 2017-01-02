@@ -88,9 +88,7 @@ Route::group(['middleware' => 'lang' ], function () {
                 return view('pm.valuation');
             });
 
-            Route::get('assign', function () {
-                return view('pm.assign');
-            });
+            Route::get('assign', 'PMcontroller@assign');
         });
 
         /************************************/

@@ -43,6 +43,7 @@
                     <th>@lang('pm.Expected Day')</th>
                     <th>@lang('pm.Owner')</th>
                     <th>@lang('pm.Details')</th>
+                    <th>assign</th>
                 </tr>
                 </thead>
 
@@ -54,6 +55,7 @@
                     <td>{{$show_index -> due_date}}</td>
                     <td>{{$show_index -> account}}</td>
                     <td><a href = "detail/{{$show_index ->d_id}}"><span class="glyphicon glyphicon-list" aria-hidden="true"></span></a></td>
+                    <td><a href = "assign"><span class="glyphicon glyphicon-list" aria-hidden="true"></span></a></td>
                     </tr>
                 @endforeach
 

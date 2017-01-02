@@ -13,56 +13,36 @@
             <div class="form-group ">
                 <label>@lang('pm.Trans')</label>
                 <select class="form-control" id="exampleSelect1">
-                    <option>English</option>
-                    <option>Traditional Chinese</option>
-                    <option>Chinese</option>
-                    <option>Japanese</option>
-                    <option>Korean</option>
-                    <option>German</option>
-                    <option>Spanish</option>
-                    <option>French</option>
+                    @foreach($user as $users)
+                        <option>{{$users -> account}}</option>
+                    @endforeach
                 </select>
             </div>
 
             <div class="form-group ">
                 <label>@lang('pm.1st-proof')</label>
                 <select class="form-control" id="exampleSelect1">
-                    <option>English</option>
-                    <option>Traditional Chinese</option>
-                    <option>Chinese</option>
-                    <option>Japanese</option>
-                    <option>Korean</option>
-                    <option>German</option>
-                    <option>Spanish</option>
-                    <option>French</option>
+                    @foreach($user as $users)
+                        <option>{{$users -> account}}</option>
+                    @endforeach
                 </select>
             </div>
 
             <div class="form-group ">
                 <label>@lang('pm.2st-proof')</label>
                 <select class="form-control" id="exampleSelect1">
-                    <option>English</option>
-                    <option>Traditional Chinese</option>
-                    <option>Chinese</option>
-                    <option>Japanese</option>
-                    <option>Korean</option>
-                    <option>German</option>
-                    <option>Spanish</option>
-                    <option>French</option>
+                    @foreach($user as $users)
+                        <option>{{$users -> account}}</option>
+                    @endforeach
                 </select>
             </div>
 
             <div class="form-group ">
                 <label>@lang('pm.3st-proof')</label>
                 <select class="form-control" id="exampleSelect1">
-                    <option>English</option>
-                    <option>Traditional Chinese</option>
-                    <option>Chinese</option>
-                    <option>Japanese</option>
-                    <option>Korean</option>
-                    <option>German</option>
-                    <option>Spanish</option>
-                    <option>French</option>
+                    @foreach($user as $users)
+                        <option>{{$users -> account}}</option>
+                    @endforeach
                 </select>
             </div>
             <div>
