@@ -79,10 +79,11 @@ Route::group(['middleware' => 'lang'], function () {
 
             Route::get('detail/download/{filename}' , ['uses' => 'PMcontroller@download' , 'as' => 'filename']);
 
-
-            Route::get('valuation', function () {
+            Route::get('valuation/{document}','PMcontroller@valuationpage');
+            Route::post('valuation/work/{document}','PMcontroller@valuation');
+           /* Route::get('valuation/{document}', function () {
                 return view('pm.valuation');
-            });
+            });*/
 
             Route::get('assign/{document}', 'PMcontroller@assign');
             Route::post('assign/work/{document}' , ['uses' => 'PMcontroller@upload' , 'as' => 'document']);
