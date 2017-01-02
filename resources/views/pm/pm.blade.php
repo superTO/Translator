@@ -43,7 +43,7 @@
                     <th>@lang('pm.Expected Day')</th>
                     <th>@lang('pm.Owner')</th>
                     <th>@lang('pm.Details')</th>
-                    <th>assign</th>
+                    <th>@lang('pm.Assign')</th>
                 </tr>
                 </thead>
 
@@ -51,16 +51,16 @@
                 @foreach($show_indexs as $show_index)
                     <tr>
                     <td>{{$show_index -> document_name}}</td>
-                    <td> @if($show_index->translation_type==0)
-                            Initial state
+                    <td>@if($show_index->translation_type==0)
+                            @lang('pm.ini_state')
                         @elseif($show_index->translation_type==1)
-                            First proofreading
+                            @lang('pm.1st-proof')
                         @elseif($show_index->translation_type==2)
-                            Second proofreading
+                            @lang('pm.2nd-proof')
                         @elseif($show_index->translation_type==3)
-                            third proofreading
+                            @lang('pm.3rd-proof')
                         @elseif($show_index->translation_type==4)
-                            Finished
+                            @lang('pm.finish_state')
                         @endif
                     </td>
                     <td>{{$show_index -> due_date}}</td>
