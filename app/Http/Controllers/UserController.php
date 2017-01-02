@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
 
 use App\document;
 use Auth;
@@ -22,5 +23,14 @@ class UserController extends Controller
        $document=DB::table('documents')->where('text_name',$filename)->delete();
 
        return redirect('/user');
+    }
+
+    public function searchDocu(Request $request)
+    {
+        $keyword = $request->input('search');
+        $id = Auth::user();
+        $documents = document::searchDocu($keyword)->get();
+
+        return view('user.user', compact('documents','id'));
     }
 }

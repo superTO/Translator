@@ -34,4 +34,18 @@ class document extends Model
     {
         return  $this->belongsTo('App\User');
     }
+
+    public function scopesearchDocu($query, $keyword)
+    {
+        if ($keyword != '') {
+            $query->where(function ($query) use ($keyword) {
+                $query->where('id', 'LIKE', "%$keyword%")
+                    ->orWhere('document_name', 'LIKE', "%$keyword%")
+                    ->orWhere('translation_type', 'LIKE', "%$keyword%")
+                    ->orWhere('due_date', 'LIKE', "%$keyword%");
+            });
+        }
+
+        return $query;
+    }
 }

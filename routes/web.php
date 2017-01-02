@@ -45,6 +45,8 @@ Route::group(['middleware' => 'lang'], function () {
 
             Route::post('/user', 'MailController@uploadmail');
 
+            Route::get('/user_', 'UserController@searchDocu');
+
             // Route::get('user/detail/{document}', 'TranslatorController@showDetail');
         });
 
