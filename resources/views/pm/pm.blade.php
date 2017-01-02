@@ -53,7 +53,7 @@
                     <td>{{$show_index -> translation_type}}</td>
                     <td>{{$show_index -> due_date}}</td>
                     <td>{{$show_index -> account}}</td>
-                    <td>{{$show_index -> remark}}</td>
+                    <td><a href = "detail/{{$show_index ->d_id}}"><span class="glyphicon glyphicon-list" aria-hidden="true"></span></a></td>
                     </tr>
                 @endforeach
 

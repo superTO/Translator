@@ -78,11 +78,11 @@ Route::group(['middleware' => 'lang' ], function () {
 
             Route::get('pm' , 'PMcontroller@pm_index');
 
-            Route::get('pmdetail', function () {
+            //Route::get('detail' , 'PMcontroller@ViewAllProcess');
 
-                $branch = 1;
-                return view('pm.detail', compact("branch"));
-            });
+            Route::get('detail/{id}' , ['uses' => 'PMcontroller@ViewCertainProcess' , 'as' => 'id']);
+
+            Route::get('detail/download/{filename}' , ['uses' => 'PMcontroller@download' , 'as' => 'filename']);
 
             Route::get('valuation', function () {
                 return view('pm.valuation');

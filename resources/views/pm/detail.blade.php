@@ -11,38 +11,38 @@
         <div class="col-lg-6">
             <div class="form-group ">
                 <label for="disabledTextInput">@lang('pm.Filename')</label>
-                <p>12377777456</p>
+                <p>{{$show_indexs[0]->document_name}}</p>
             </div>
             <div class="form-group ">
                 <label for="disabledTextInput">@lang('pm.Status')</label>
-                <p>123456</p>
+                <p>{{$show_indexs[0]->translation_type }}</p>
             </div>
             <div class="form-group  ">
                 <label for="disabledTextInput">@lang('pm.Artical type')</label>
-                <p>123456</p>
+                <p>{{$show_indexs[0]->document_type  }}</p>
             </div>
 
             <div class="form-group  ">
                 <label for="disabledTextInput">@lang('pm.Expected Day')</label>
-                <p>123456</p>
+                <p>{{$show_indexs[0]->due_date  }}</p>
             </div>
 
             <div class="form-group">
                 <label for="disabledTextInput">@lang('pm.Ori-lang')</label>
-                <p>123456</p>
+                <p>{{$show_indexs[0]->original_language  }}</p>
             </div>
             <div class="form-group">
                 <label for="disabledTextInput">@lang('pm.Trans-lang')</label>
-                <p>123456</p>
+                <p>{{$show_indexs[0]->translated_language  }}</p>
             </div>
 
             <div class="form-group  ">
                 <label for="disabledTextInput">@lang('pm.Owner')</label>
-                <p>123456</p>
+                <p>{{$show_indexs[0]->account  }}</p>
             </div>
             <div class="form-group  ">
                 <label for="disabledTextInput">@lang('pm.Money')</label>
-                <p>123456</p>
+                <p>{{$show_indexs[0]->payment_type  }}</p>
             </div>
         </div>
 
@@ -50,28 +50,9 @@
             <div class="form-group  ">
                 <div>
                     <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
-                    <button type="button" class="btn btn-link">@lang('pm.Download')</button>
+                    <a href="download/{{$show_indexs[0] -> text_name }}"><button type="button" class="btn btn-link">@lang('pm.Download')</button></a>
                 </div>
             </div>
-            @if ($branch===1)
-            <div class="form-group  ">
-                <a href="/valuation"><button type="button" class="btn btn-primary btn-lg btn-block">@lang('pm.Valuation')</button></a>
-                <small id="fileHelp" class="form-text text-muted">@lang('pm.Notice')
-                </small>
-            </div>
-            @elseif($branch===2)
-                <div class="form-group  ">
-                    <a href="/assign"><button type="button" class="btn btn-primary btn-lg btn-block">@lang('pm.assign')</button></a>
-                    <small id="fileHelp" class="form-text text-muted">@lang('pm.Notice')
-                    </small>
-                </div>
-
-            @else
-                <div>
-                    <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
-                    <button type="button" class="btn btn-link">@lang('pm.Download')</button>
-                </div>
-            @endif
 
 
         </div>
