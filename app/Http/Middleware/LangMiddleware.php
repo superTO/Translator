@@ -16,8 +16,7 @@ class LangMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if(!Session::has('locale'))
-        {
+        if (! Session::has('locale')) {
             Session::put('locale', config('app.fallback_locale'));
         }
         app()->setLocale(Session::get('locale'));
