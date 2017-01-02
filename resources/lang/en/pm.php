@@ -13,7 +13,6 @@ return [
     'Details' => 'Details',
     'Money' =>'Price',
 
-
     'Filename' => 'File Name',
     'Artical type' => 'Artical Type',
     'Ori-lang' => 'Origin Language',
@@ -22,7 +21,6 @@ return [
     'Valuation' => 'Valuation',
     'Notice' => 'Notice : If you are not responsor of this status, DON\'T EDIT IT!!!',
     'assign' => 'assign',
-
 
     'Accept?' => 'Accept/Reject this case?',
     'Accept' => 'Accept',
@@ -36,4 +34,6 @@ return [
     '2st-proof' => '2st-Proofreader',
     '3st-proof' => '3st-Proofreader',
     'My account' => 'My account',
+
+    'Remark' => 'Remark',
 ];

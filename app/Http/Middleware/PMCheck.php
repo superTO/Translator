@@ -5,7 +5,6 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
-
 class PMCheck
 {
     /**
@@ -18,9 +17,10 @@ class PMCheck
     public function handle($request, Closure $next)
     {
         $user = Auth::user();
-        if($user->role != 2){
+        if ($user->role != 2) {
             return redirect('/home');
         }
+
         return $next($request);
     }
 }

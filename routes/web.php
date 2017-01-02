@@ -12,15 +12,10 @@
 |
 */
 
-
-
-
-Route::group(['middleware' => 'lang' ], function () {
-
+Route::group(['middleware' => 'lang'], function () {
     Route::get('/', function () {
         return view('welcome');
     });
-
 
     Route::get('about', function () {
         return view('pages.about');
@@ -28,9 +23,7 @@ Route::group(['middleware' => 'lang' ], function () {
 
     Route::get('/lang/set/{lang}', 'LanguageController@set_lang');
 
-
     Route::group(['middleware' => 'auth'], function () {
-
 
         /************************************/
 
@@ -40,7 +33,6 @@ Route::group(['middleware' => 'lang' ], function () {
                  return view('user.user');
              });
            */
-
 
             Route::get('user', 'DocumentController@showuserDocument');
             Route::get('user/upload', function () {
@@ -55,9 +47,7 @@ Route::group(['middleware' => 'lang' ], function () {
         /************************************/
 
         Route::group(['middleware' => 'trans'], function () {
-
             Route::get('trans/index', 'DocumentController@showtransDocument');
-
 
             Route::get('trans/detail/{document}', 'TranslatorController@showDetail');
 
@@ -69,20 +59,20 @@ Route::group(['middleware' => 'lang' ], function () {
 
             Route::get('/trans/detail/{document}/Original_Download', 'DocumentController@downloadOriginalFile');
             Route::get('/trans/detail/{document}/Current_Download', 'DocumentController@downloadCurrentFile');
-
         });
 
         /************************************/
 
         Route::group(['middleware' => 'pm'], function () {
+            Route::get('pm', 'PMcontroller@pm_index');
 
-            Route::get('pm' , 'PMcontroller@pm_index');
 
             //Route::get('detail' , 'PMcontroller@ViewAllProcess');
 
             Route::get('detail/{id}' , ['uses' => 'PMcontroller@ViewCertainProcess' , 'as' => 'id']);
 
             Route::get('detail/download/{filename}' , ['uses' => 'PMcontroller@download' , 'as' => 'filename']);
+
 
             Route::get('valuation', function () {
                 return view('pm.valuation');
@@ -94,8 +84,6 @@ Route::group(['middleware' => 'lang' ], function () {
         /************************************/
 
         Route::group(['middleware' => 'admin'], function () {
-
-
             Route::get('admin/index', 'AdminController@index');
 
             Route::get('admin/index_Users', 'AdminController@UserIndex');
@@ -112,22 +100,14 @@ Route::group(['middleware' => 'lang' ], function () {
 
             Route::get('/admin_', 'AdminController@searchAccount');
         });
-
-
-
-
-
-
     });
     Auth::routes();
 });
-
 
 Route::get('/home', 'HomeController@index');
 Route::get('disable', function () {
     return view('disable.disable');
 });
-
 
 Route::post('testmail', 'MailController@uploadmail');  //test mail
 

@@ -34,4 +34,7 @@ return [
     '2st-proof' => '2st-校稿',
     '3st-proof' => '3st-校稿',
     'My account' => '我的帳戶',
+
+    'Remark' => '備註',
+
 ];
