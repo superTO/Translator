@@ -48,12 +48,13 @@
 
                 <tbody>
                 @foreach($show_indexs as $show_index)
+                    <tr>
                     <td>{{$show_index -> document_name}}</td>
                     <td>{{$show_index -> translation_type}}</td>
                     <td>{{$show_index -> due_date}}</td>
                     <td>{{$show_index -> account}}</td>
                     <td>{{$show_index -> remark}}</td>
-
+                    </tr>
                 @endforeach
 
                 </tbody>
