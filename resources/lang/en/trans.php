@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: lchao
  * Date: 2016/12/23
- * Time: 下午11:06
+ * Time: 下午11:06.
  */
 return [
 

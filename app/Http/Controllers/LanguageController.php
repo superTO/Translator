@@ -9,8 +9,9 @@ use Illuminate\Support\Facades\Redirect;
 
 class LanguageController extends Controller
 {
-    function set_lang(Request $request, $lang){
-        switch($lang){
+    public function set_lang(Request $request, $lang)
+    {
+        switch ($lang) {
             case 'zh_tw':
                 App::setLocale('zh_tw');
                 Session::put('locale', App::getLocale());
@@ -20,6 +21,7 @@ class LanguageController extends Controller
                 Session::put('locale', App::getLocale());
                 break;
         }
+
         return Redirect::back();
     }
 }

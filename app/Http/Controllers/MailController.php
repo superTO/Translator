@@ -11,31 +11,28 @@ use DB;
 use App\User;
 use App\document;
 
-
 class MailController extends Controller
 {
-    public function validator(document $document){
-		return Validator::make($document, [
+    public function validator(document $document)
+    {
+        return Validator::make($document, [
             'filename' => 'required|max:255',
             'data' => 'required',
             //'remark' => 'required',
             'ori_language' => 'required',
             'trans_language' => 'required',
             'file_input' => 'required',
-            'document_type' => 'required'
+            'document_type' => 'required',
         ]);
-	}
-	
-	public function uploadmail(Request $request, document $document)
-	{
-	    
-	    
+    }
+
+    public function uploadmail(Request $request, document $document)
+    {
         $id = Auth::user();
-        
-        $PMemail = DB::table('users')->where('role', 2 )->value('email');
+
+        $PMemail = DB::table('users')->where('role', 2)->value('email');
         $email = new getmail();
         Mail::to($PMemail)->queue($email);
-        
 
         $document = document::create([
             'document_name' => $request['filename'],
@@ -51,9 +48,9 @@ class MailController extends Controller
             'money' => 0,
             ]);
         $docu_name = $request->file('file_input')->getClientOriginalName();
-        
-        $request->file('file_input')->storeAs('Documents',$docu_name);
-        
+
+        $request->file('file_input')->storeAs('Documents', $docu_name);
+
         return redirect('user');
-	}
+    }
 }
