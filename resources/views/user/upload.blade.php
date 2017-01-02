@@ -13,17 +13,17 @@
             
             <div class="form-group " >
                 <label>@lang('user.Filename')</label>
-                <input type="text" class="form-control" name="filename" placeholder="Enter filename" value="123456">
+                <input type="text" class="form-control" name="filename" placeholder="Enter filename" value="">
             </div>
             <div class="form-group  ">
                 <label>@lang('user.Artical type')</label>
-                <input type="text" class="form-control" name="remark" placeholder="remark" value="123456">
+                <input type="text" class="form-control" name="remark" placeholder="remark" value="">
             </div>
 
             <div class="form-group  ">
                 <label>@lang('user.Expected Day')</label>
                 <div>
-                    <input class="form-control" type="date" name="date" value="2016-12-11" id="example-date-input">
+                    <input class="form-control" type="date" name="date" value="2017-01-02" id="example-date-input">
                 </div>
             </div>
 

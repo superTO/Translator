@@ -10,7 +10,7 @@ return [
     'Name' => 'Name',
     'Status' => 'Status',
     'Expected Date' =>'Expected Date',
-    'Owner' => 'Owner',
+    'Download' => 'Download',
     'Details' => 'Details',
     'Cancel' => 'Cancel',
     'Upload' => 'Upload',

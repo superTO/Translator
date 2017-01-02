@@ -10,7 +10,7 @@ return [
     'Name' => '檔案名稱',
     'Status' => '狀態',
     'Expected Date' =>'期望日期',
-    'Owner' => '負責人',
+    'Download' => '下載',
     'Details' => '細節',
     'Cancel' => '取消',
     'Upload' => '上傳',

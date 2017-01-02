@@ -42,7 +42,7 @@
                     <th>@lang('user.Name')</th>
                     <th>@lang('user.Status')</th>
                     <th>@lang('user.Expected Date')</th>
-                    <th>@lang('user.Owner')</th>
+                    <th>@lang('user.Download')</th>
                     <th>@lang('user.Details')</th>
                 </tr>
                 </thead>
