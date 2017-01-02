@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\document;
+use ClassesWithParents\D;
 use Illuminate\Http\Request;
 
 use DB;
@@ -40,11 +41,14 @@ class PMcontroller extends Controller
     }
 
     public function assign(){
-        $user = DB::table('users')
-            ->get();
+        $user = DB::table('users')->where('role' , '=' , '3')->get();
         //dump($user);
         //exit(0);
         return view('pm.assign' , compact('user'));
+    }
+
+    public function upload(Request $request){
+
     }
 
 
