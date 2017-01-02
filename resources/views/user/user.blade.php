@@ -38,7 +38,7 @@
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th>@lang('user.Number')</th>
+                   {{-- <th>@lang('user.Number')</th>--}}
                     <th>@lang('user.Name')</th>
                     <th>@lang('user.Status')</th>
                     <th>@lang('user.Expected Date')</th>
@@ -50,20 +50,19 @@
                 @foreach($documents as $docu)
                     @if($docu->upload_user_id==$id->id)
                         <tr>
-                            <td> {{$docu->id}} </td>
+                           {{-- <td> {{$docu->id}} </td>--}}
                             <td> {{$docu->document_name}} </td>
-                            <td> @if($docu->translation_type==0)
-                                    Initial state
+                            <td>@if($docu->translation_type==0)
+                                    @lang('pm.ini_state')
                                 @elseif($docu->translation_type==1)
-                                    First proofreading
+                                    @lang('pm.1st-proof')
                                 @elseif($docu->translation_type==2)
-                                    Second proofreading
+                                    @lang('pm.2nd-proof')
                                 @elseif($docu->translation_type==3)
-                                    third proofreading
+                                    @lang('pm.3rd-proof')
                                 @elseif($docu->translation_type==4)
-                                    Finished
+                                    @lang('pm.finish_state')
                                 @endif
-
                             </td>
                             <td> {{$docu->due_date}} </td>
                             <td>

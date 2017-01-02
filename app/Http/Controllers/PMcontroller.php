@@ -12,8 +12,6 @@ use DB;
 class PMcontroller extends Controller
 {
 
-
-
     public function pm_index(){
         $show_indexs = DB::table('documents')
             ->select('documents.id AS d_id', 'documents.*', 'users.*')
@@ -55,6 +53,7 @@ class PMcontroller extends Controller
         return redirect('pm');
     }
 
+<<<<<<< HEAD
     public function valuationpage(document $document){
         //dd($document->id);
         //dd($document);
@@ -62,6 +61,14 @@ class PMcontroller extends Controller
     }
     public function valuation(Request $request,document $document){
         dd($request->decison);
+=======
+    public function searchDocu(Request $request)
+    {
+        $keyword = $request->input('search');
+        $show_indexs = document::searchDocu($keyword)->get();
+
+        return view('pm.pm', compact('show_indexs'));
+>>>>>>> ab97b437d31e85d53616fe99b899f2b7e1da77c7
     }
 
 

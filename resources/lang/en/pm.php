@@ -20,7 +20,7 @@ return [
     'Download' => 'Download Origin File',
     'Valuation' => 'Valuation',
     'Notice' => 'Notice : If you are not responsor of this status, DON\'T EDIT IT!!!',
-    'assign' => 'assign',
+    'Assign' => 'Assign',
 
     'Accept?' => 'Accept/Reject this case?',
     'Accept' => 'Accept',
@@ -33,6 +33,8 @@ return [
     '1st-proof' => '1st-Proofreader',
     '2st-proof' => '2st-Proofreader',
     '3st-proof' => '3st-Proofreader',
+    'ini_state' => 'Initial State',
+    'finish_state' => 'Finish',
     'My account' => 'My account',
 
     'Remark' => 'Remark',

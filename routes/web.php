@@ -72,6 +72,7 @@ Route::group(['middleware' => 'lang'], function () {
         Route::group(['middleware' => 'pm'], function () {
             Route::get('pm', 'PMcontroller@pm_index');
 
+            Route::get('pm_', 'PMcontroller@searchDocu');
 
             //Route::get('detail' , 'PMcontroller@ViewAllProcess');
 

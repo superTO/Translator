@@ -20,7 +20,7 @@ return [
     'Download' => '下載原始檔案',
     'Valuation' => '估價',
     'Notice' => '注意!!!如果你不是負責人，不要動它!!!!!!',
-    'assign' => '分配負責人',
+    'Assign' => '分配負責人',
 
     'Accept?' => '接受/拒絕這個案子?',
     'Accept' => '接受',
@@ -33,6 +33,8 @@ return [
     '1st-proof' => '1st-校稿',
     '2st-proof' => '2st-校稿',
     '3st-proof' => '3st-校稿',
+    'ini_state' => '未翻譯',
+    'finish_state' => '完成',
     'My account' => '我的帳戶',
 
     'Remark' => '備註',
