@@ -69,7 +69,7 @@
                             <td>
                                 <a href="/user/download/{{ $docu-> text_name }}">@lang('user.Download')</a>
                             </td>
-                            <td><a>@lang('user.Cancel')</a></td>
+                            <td><a href="user/cancel/{{ $docu -> text_name  }}">@lang('user.Cancel')</a></td>
                         </tr>
                     @endif
                 @endforeach
