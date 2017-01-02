@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -25,19 +23,20 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if(Auth::guest())
+        if (Auth::guest()) {
             return redirect('/');
+        }
         $id = Auth::user();
-        if($id->role === 0)
-            return redirect('/admin/index') ;
-        elseif($id->role === 1)
+        if ($id->role === 0) {
+            return redirect('/admin/index');
+        } elseif ($id->role === 1) {
             return redirect('/user');
-        elseif ($id->role === 2)
+        } elseif ($id->role === 2) {
             return redirect('/pm');
-        elseif ($id->role === 3)
+        } elseif ($id->role === 3) {
             return redirect('/trans/index');
-        else
+        } else {
             return redirect('/disable');
-
+        }
     }
 }
