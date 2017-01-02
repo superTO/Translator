@@ -12,7 +12,7 @@
 
         <div class="container">
             <div class="col-lg-4">
-                <legend><h1><a href="/user/index">@lang('user.Filelist')</a></h1></legend>
+                <legend><h1><a href="/user">@lang('user.Filelist')</a></h1></legend>
             </div>
 
             <div class="col-lg-8">
@@ -64,29 +64,12 @@
                                     Finished
                                 @endif
 
-
                             </td>
                             <td> {{$docu->due_date}} </td>
-                            <td>    @if($docu->translator1)
-                                    <li>{{ $docu->translator1->name }}</li>
-                                @endif
-
-                                @if ($docu->translator2)
-
-                                    <li>{{$docu->translator2->name}}</li>
-
-                                @endif
-                                @if ($docu->translator3)
-
-                                    <li>{{$docu->translator3->name}}</li>
-                                @endif
-                                @if ($docu->translator4)
-
-                                    <li>{{$docu->translator4->name}}</li>
-                                @endif
-
+                            <td>
+                                <a>@lang('user.Download')</a>
                             </td>
-                            <td>@lang('user.Cancel')</td>
+                            <td><a>@lang('user.Cancel')</a></td>
                         </tr>
                     @endif
                 @endforeach
