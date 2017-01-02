@@ -76,9 +76,7 @@ Route::group(['middleware' => 'lang' ], function () {
 
         Route::group(['middleware' => 'pm'], function () {
 
-            Route::get('pm', function () {
-                return view('pm.pm');
-            });
+            Route::get('pm' , 'PMcontroller@pm_index');
 
             Route::get('pmdetail', function () {
 
