@@ -1,7 +1,7 @@
 @extends('layouts.for_user')
 
 @section('bar_element')
-    <li><a href="{{ url('/trans') }}">My Account</a></li>
+    <li><a href="{{ url('/trans/index') }}">My Account</a></li>
 @endsection
 
 @section('content')

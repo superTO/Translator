@@ -38,7 +38,7 @@
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th>@lang('user.Number')</th>
+                   {{-- <th>@lang('user.Number')</th>--}}
                     <th>@lang('user.Name')</th>
                     <th>@lang('user.Status')</th>
                     <th>@lang('user.Expected Date')</th>
@@ -50,7 +50,7 @@
                 @foreach($documents as $docu)
                     @if($docu->upload_user_id==$id->id)
                         <tr>
-                            <td> {{$docu->id}} </td>
+                           {{-- <td> {{$docu->id}} </td>--}}
                             <td> {{$docu->document_name}} </td>
                             <td> @if($docu->translation_type==0)
                                     Initial state
