@@ -77,14 +77,13 @@ Route::group(['middleware' => 'lang'], function () {
 
             Route::get('detail/download/{filename}' , ['uses' => 'PMcontroller@download' , 'as' => 'filename']);
 
-            Route::get('assign/upload' , 'PMcontroller@upload');
-
 
             Route::get('valuation', function () {
                 return view('pm.valuation');
             });
 
-            Route::get('assign', 'PMcontroller@assign');
+            Route::get('assign/{document}', 'PMcontroller@assign');
+            Route::post('assign/work/{document}' , ['uses' => 'PMcontroller@upload' , 'as' => 'document']);
         });
 
         /************************************/

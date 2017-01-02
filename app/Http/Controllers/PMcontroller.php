@@ -40,15 +40,20 @@ class PMcontroller extends Controller
 
     }
 
-    public function assign(){
+    public function assign(document $document){
         $user = DB::table('users')->where('role' , '=' , '3')->get();
         //dump($user);
         //exit(0);
-        return view('pm.assign' , compact('user'));
+        return view('pm.assign' , compact('user','document'));
     }
 
-    public function upload(Request $request){
-
+    public function upload(Request $request,document $document){
+        DB::table('documents')
+            ->where('id' , '=' , $document->id)
+            ->update(['translator1_id'=>$request->translator1_id , 'translator2_id'=>$request->translator2_id
+                 , 'translator3_id'=>$request->translator3_id , 'translator4_id'=>$request->translator4_id]
+             );
+        return redirect('pm');
     }
 
 
