@@ -11,7 +11,7 @@
 
         <div class="container">
             <div class="col-lg-4">
-                <legend><h1>@lang('pm.Filelist')</h1> </legend>
+                <legend><h1><a href="/pm">@lang('pm.Filelist')</a></h1></legend>
             </div>
 
             <div class="col-lg-8">
@@ -22,7 +22,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-md-offset-3">
-                        <form action="" class="search-form">
+                        <form action="/pm_" class="search-form">
                             <div class="form-group has-feedback">
                                 <label for="search" class="sr-only">@lang('pm.Search')</label>
                                 <input type="text" class="form-control" name="search" id="search" placeholder="search">
@@ -72,5 +72,4 @@
     <div class="col-lg-2"></div>
 
     </body>
-    </html>
 @endsection

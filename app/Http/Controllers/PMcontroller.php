@@ -12,8 +12,6 @@ use DB;
 class PMcontroller extends Controller
 {
 
-
-
     public function pm_index(){
         $show_indexs = DB::table('documents')
             ->select('documents.id AS d_id', 'documents.*', 'users.*')
@@ -54,6 +52,14 @@ class PMcontroller extends Controller
                  , 'translator3_id'=>$request->translator3_id , 'translator4_id'=>$request->translator4_id]
              );
         return redirect('pm');
+    }
+
+    public function searchDocu(Request $request)
+    {
+        $keyword = $request->input('search');
+        $show_indexs = document::searchDocu($keyword)->get();
+
+        return view('pm.pm', compact('show_indexs'));
     }
 
 
