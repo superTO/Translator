@@ -67,7 +67,7 @@
                             </td>
                             <td> {{$docu->due_date}} </td>
                             <td>
-                                <a>@lang('user.Download')</a>
+                                <a href="/user/download/{{ $docu-> text_name }}">@lang('user.Download')</a>
                             </td>
                             <td><a>@lang('user.Cancel')</a></td>
                         </tr>

@@ -59,6 +59,7 @@ class DocumentController extends Controller
     public function downloadOriginalFile(document $document)
     {
         $docu_name = $document->text_name;
+        echo $docu_name;
         $path = storage_path("app\Documents\\".$docu_name);
 
         return response()->download($path);
