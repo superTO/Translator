@@ -32,7 +32,7 @@ class PMcontroller extends Controller
     }
 
     public function download($filename){
-        $path = storage_path('app\Documents\\' .$filename);
+        $path = storage_path('app/Documents/' .$filename);
 //        $path = 'storage/app/Documents' . '/' . $filename;
 
         return response()->download($path);
