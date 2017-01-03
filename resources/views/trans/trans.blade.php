@@ -47,7 +47,7 @@
                 </thead>
                 <tbody>
                @foreach($documents as $docu)
-                 @if(($docu->translator1_id==$id->id) ||($docu->translator2_id==$id->id)||($docu->translator3_id==$id->id)||($docu->translator4_id==$id->id))
+                 @if((($docu->translator1_id==$id->id) ||($docu->translator2_id==$id->id)||($docu->translator3_id==$id->id)||($docu->translator4_id==$id->id)) && $docu->payment_type!=11)
                   <tr>
                         <td> {{$docu->id}} </td>
                         <td> {{$docu->document_name}} </td>

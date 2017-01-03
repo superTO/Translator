@@ -22,8 +22,14 @@ class UserController extends Controller
     {
         $path = storage_path('app/Documents/' . $filename);
         File::delete($path);
-       $document=DB::table('documents')->where('text_name',$filename)->delete();
-
+       $document=DB::table('documents')->where('text_name','=',$filename)->get();//->delete();
+        $trans_file_name=$document[0]->translated_upolad_filename;
+        if($trans_file_name!=NULL)
+        {
+            $path = storage_path('app/Documents/' . $trans_file_name);
+            File::delete($path);
+        }
+        $document=DB::table('documents')->where('text_name','=',$filename)->delete();
        return redirect('/user');
     }
 

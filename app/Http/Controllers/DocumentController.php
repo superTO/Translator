@@ -32,7 +32,13 @@ class DocumentController extends Controller
         $rules = ['documents'=>'required|mimes:docx,doc|max:25000', 'optionsRadios'=>'required'];
         $this->validate($request, $rules);
         DB::table('documents')->where('id', $document->id)->update(['translation_type' => $request->optionsRadios]);
-        $docu_name = 'New_'.$document->text_name;
+        if($document->translated_upolad_filename!=NULL)
+        {
+            $path = storage_path('app/Documents/' . $document->translated_upolad_filename);
+            File::delete($path);
+        }
+        $docu_name = sprintf('%s-%s.%s', md5(microtime(true)), str_random(8), $request->file('documents')->guessExtension());
+        DB::table('documents')->where('id', $document->id)->update(['translated_upolad_filename' => $docu_name]);
         $request->file('documents')->storeAs('Documents', $docu_name);
         return redirect('/trans/index');
     }
@@ -47,9 +53,9 @@ class DocumentController extends Controller
 
     public function downloadCurrentFile(document $document)
     {
-        $docu_name = 'New_'.$document->text_name;
+        $docu_name = $document->translated_upolad_filename;
         $path = storage_path("app/Documents/".$docu_name);
-        if(File::exists($path))
+        if(File::exists($path)&&$docu_name!=NULL)
         {
             return response()->download($path);
         }
