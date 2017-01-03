@@ -63,6 +63,8 @@
                             @lang('pm.3rd-proof')
                         @elseif($show_index->translation_type==4)
                             @lang('pm.finish_state')
+                        @elseif($show_index->translation_type==10)
+                            @lang('pm.Reject')
                         @endif
                     </td>
                     <td>{{$show_index -> due_date}}</td>
