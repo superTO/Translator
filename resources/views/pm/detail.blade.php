@@ -15,11 +15,23 @@
             </div>
             <div class="form-group ">
                 <label for="disabledTextInput">@lang('pm.Status')</label>
-                <p>{{$show_indexs[0]->translation_type }}</p>
+                <p>
+                    @if($show_indexs[0]->translation_type==0)
+                        Initial state
+                    @elseif($show_indexs[0]->translation_type==1)
+                        1st-proofreading
+                    @elseif($show_indexs[0]->translation_type==2)
+                        2nd-proofreading
+                    @elseif($show_indexs[0]->translation_type==3)
+                        3rd-proofreading
+                    @elseif($show_indexs[0]->translation_type==4)
+                        Finished
+                    @endif
+                </p>
             </div>
             <div class="form-group  ">
                 <label for="disabledTextInput">@lang('pm.Artical type')</label>
-                <p>{{$show_indexs[0]->document_type  }}</p>
+                <p>{{$show_indexs[0]->remark  }}</p>
             </div>
 
             <div class="form-group  ">
@@ -38,11 +50,11 @@
 
             <div class="form-group  ">
                 <label for="disabledTextInput">@lang('pm.Owner')</label>
-                <p>{{$show_indexs[0]->account  }}</p>
+                <p>{{$show_indexs[0]->upload_user->name   }}</p>
             </div>
             <div class="form-group  ">
                 <label for="disabledTextInput">@lang('pm.Money')</label>
-                <p>{{$show_indexs[0]->payment_type  }}</p>
+                <p>{{$show_indexs[0]->money  }}</p>
             </div>
         </div>
 

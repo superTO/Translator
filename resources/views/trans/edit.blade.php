@@ -30,15 +30,9 @@
             </div>
             <div class="form-group  ">
                 <label for="disabledTextInput">@lang('trans.Article_type')</label>
-                <p>@if($document->document_type==0)
-                        Academic
-                    @elseif($document->document_type==1)
-                        Law
-                    @elseif($document->document_type==2)
-                        Sports
-                    @else
-                        others
-                    @endif</p>
+                <p>
+                    {{$document -> remark}}
+                </p>
             </div>
 
             <div class="form-group  ">
