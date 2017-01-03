@@ -74,8 +74,13 @@ class PMcontroller extends Controller
     public function searchDocu(Request $request)
     {
         $keyword = $request->input('search');
-        $show_indexs = document::searchDocu($keyword)->get();
-
+        $show_indexs = DB::table('documents')
+            ->where('document_name', 'LIKE', "%$keyword%")
+            ->select('documents.id AS d_id', 'documents.*', 'users.*')
+            ->join('users' , 'documents.upload_user_id' , '=' , 'users.id')->get();
+        //$show_indexs = document::searchDocu($keyword)->get();
+        //$show_indexs=document::with('upload_user')->where('document_name', 'LIKE', "%$keyword%")->get();
+        //dd($show_indexs);
         return view('pm.pm', compact('show_indexs'));
     }
 

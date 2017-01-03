@@ -65,7 +65,7 @@
                         @endif
                     </td>
                     <td>{{$show_index -> due_date}}</td>
-                    <td>{{$show_index -> account}}</td>
+                    <td>{{$show_index -> name}}</td>
                     <td>
                         <a href = "detail/{{$show_index ->d_id}}">
                             <span class="glyphicon glyphicon-list" aria-hidden="true"></span></a>
