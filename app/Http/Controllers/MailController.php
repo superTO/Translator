@@ -31,7 +31,6 @@ class MailController extends Controller
         $rules=[
             'filename' => 'required|max:255',
             'date' => 'required',
-            'remark' => 'required',
             'file_input' => 'required',
         ];
         $this->validate($request, $rules);
