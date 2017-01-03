@@ -20,12 +20,8 @@ class PMcontroller extends Controller
     }
 
     public function ViewCertainProcess($id){
-        $show_indexs = DB::table('documents')
-            //->where('id' , '=' , $id)
-            ->select('documents.id AS d_id', 'documents.*', 'users.*')
-            ->join('users' , 'documents.upload_user_id' , '=' , 'users.id')->get();
-        //dump($show_indexs);
-        //exit(0);
+        $show_indexs=document::with('upload_user')->where('id','=',$id)->get();
+       // dd($show_indexs);
         return view('pm.detail' , compact('show_indexs'));
 
     }

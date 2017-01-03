@@ -56,7 +56,7 @@
 
             <div>
                     <div class="form-group  ">
-                        <a href="/valuation/{{$show_indexs[0]->d_id}}"><button type="button" class="btn btn-primary btn-lg btn-block">Valuation</button></a>
+                        <a href="/valuation/{{$show_indexs[0]->id}}"><button type="button" class="btn btn-primary btn-lg btn-block">Valuation</button></a>
                     </div>
             </div>
 

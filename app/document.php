@@ -15,6 +15,10 @@ class document extends Model
         'translator3_id', 'translator4_id', 'payment_type', 'money',
     ];
 
+    public function upload_user()
+    {
+        return  $this->belongsTo('App\User');
+    }
     public function translator1()
     {
         return  $this->belongsTo('App\User');
