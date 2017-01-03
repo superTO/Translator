@@ -7,6 +7,7 @@ use App\document;
 use DB;
 use Auth;
 use App\User;
+use File;
 
 class DocumentController extends Controller
 {
@@ -41,7 +42,6 @@ class DocumentController extends Controller
         $id = Auth::user();
         $keyword = $request->input('search');
         $documents = document::with('translator1', 'translator2', 'translator3', 'translator4')->where('document_name', 'LIKE', "%$keyword%")->get();
-
         return view('trans.trans', compact('documents', 'id'));
     }
 
@@ -49,8 +49,15 @@ class DocumentController extends Controller
     {
         $docu_name = 'New_'.$document->text_name;
         $path = storage_path("app/Documents/".$docu_name);
-
-        return response()->download($path);
+        if(File::exists($path))
+        {
+            return response()->download($path);
+        }
+        else
+        {
+            return back();
+        }
+        
     }
 
     public function downloadOriginalFile(document $document)
