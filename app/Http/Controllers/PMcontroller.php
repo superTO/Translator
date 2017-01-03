@@ -86,6 +86,12 @@ class PMcontroller extends Controller
     {
         $path = storage_path('app/Documents/' . $document->text_name);
         File::delete($path);
+        $trans_upload_file_name=$document->translated_upolad_filename;
+        if($trans_upload_file_name!=null)
+        {
+            $trans_upload_path=storage_path('app/Documents/' . $document->translated_upolad_filename);
+            File::delete($trans_upload_path);
+        }
        $documet = DB::table('documents')
           -> where('id' , '=' , $document->id)
           ->delete();

@@ -41,4 +41,21 @@ class UserController extends Controller
 
         return view('user.user', compact('documents','id'));
     }
+    public function download($filename)
+    {
+        $document=DB::table('documents')->where('text_name','=',$filename)->get();
+        $trans_file_name=$document[0]->translated_upolad_filename;
+        if($trans_file_name!=NULL)
+        {
+            $path = storage_path('app/Documents/' .$trans_file_name);
+            return response()->download($path);
+        }
+        else
+        {
+            $path = storage_path('app/Documents/' .$filename);
+            return response()->download($path);
+        }
+        
+
+    }
 }
