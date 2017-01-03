@@ -30,12 +30,9 @@ class DocumentController extends Controller
     {
         $rules = ['documents'=>'required|mimes:docx,doc|max:25000', 'optionsRadios'=>'required'];
         $this->validate($request, $rules);
-        DB::table('documents')->where('id', $document->id)
-                            ->update(['translation_type' => $request->optionsRadios]);
-
+        DB::table('documents')->where('id', $document->id)->update(['translation_type' => $request->optionsRadios]);
         $docu_name = 'New_'.$document->text_name;
         $request->file('documents')->storeAs('Documents', $docu_name);
-
         return redirect('/trans/index');
     }
 
@@ -59,9 +56,7 @@ class DocumentController extends Controller
     public function downloadOriginalFile(document $document)
     {
         $docu_name = $document->text_name;
-        echo $docu_name;
         $path = storage_path("app/Documents/".$docu_name);
-
         return response()->download($path);
     }
 }
