@@ -62,7 +62,7 @@ class PMcontroller extends Controller
         {
             DB::table('documents')
                 ->where('id' , '=' , $document->id)
-                ->update(['translation_type' => '10' , 'payment_type' => '10']);
+                ->update(['translation_type' => '10' , 'payment_type' => '11']);
         }
         else
         {

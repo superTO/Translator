@@ -45,6 +45,7 @@
                     <th>@lang('pm.Details')</th>
                     <th>@lang('pm.Assign')</th>
                     <th>delete</th>
+                    <th>Valuation</th>
                 </tr>
                 </thead>
 
@@ -83,6 +84,18 @@
                             <a href ="delete/{{$show_index -> d_id}}">
                                 <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                             </a>
+                        </td>
+                        <td>
+
+                                @if($show_index-> payment_type == 10)
+                                     <span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+                                @elseif($show_index-> payment_type == 11)
+                                    <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>
+                                @else
+                                <a href= "valuation/{{$show_index -> d_id}}">
+                                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                                </a>
+                                @endif
                         </td>
                     </tr>
                 @endforeach
