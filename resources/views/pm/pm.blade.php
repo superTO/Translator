@@ -44,6 +44,7 @@
                     <th>@lang('pm.Owner')</th>
                     <th>@lang('pm.Details')</th>
                     <th>@lang('pm.Assign')</th>
+                    <th>delete</th>
                 </tr>
                 </thead>
 
@@ -65,8 +66,19 @@
                     </td>
                     <td>{{$show_index -> due_date}}</td>
                     <td>{{$show_index -> account}}</td>
-                    <td><a href = "detail/{{$show_index ->d_id}}"><span class="glyphicon glyphicon-list" aria-hidden="true"></span></a></td>
-                    <td><a href = "assign/{{$show_index ->d_id}}"><span class="glyphicon glyphicon-list" aria-hidden="true"></span></a></td>
+                    <td>
+                        <a href = "detail/{{$show_index ->d_id}}">
+                            <span class="glyphicon glyphicon-list" aria-hidden="true"></span></a>
+                    </td>
+                    <td>
+                        <a href = "assign/{{$show_index ->d_id}}">
+                            <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span></a>
+                    </td>
+                        <td>
+                            <a href ="delete/{{$show_index -> d_id}}">
+                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                            </a>
+                        </td>
                     </tr>
                 @endforeach
 

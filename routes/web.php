@@ -82,9 +82,7 @@ Route::group(['middleware' => 'lang'], function () {
 
             Route::get('valuation/{document}','PMcontroller@valuationpage');
             Route::post('valuation/work/{document}','PMcontroller@valuation');
-           /* Route::get('valuation/{document}', function () {
-                return view('pm.valuation');
-            });*/
+            Route::get('delete/{document}' , ['uses' => 'PMcontroller@delete' , 'as' => 'document']);
 
             Route::get('assign/{document}', 'PMcontroller@assign');
             Route::post('assign/work/{document}' , ['uses' => 'PMcontroller@upload' , 'as' => 'document']);

@@ -8,6 +8,7 @@ use ClassesWithParents\D;
 use Illuminate\Http\Request;
 
 use DB;
+use Illuminate\Support\Facades\Storage;
 
 class PMcontroller extends Controller
 {
@@ -76,6 +77,16 @@ class PMcontroller extends Controller
         $show_indexs = document::searchDocu($keyword)->get();
 
         return view('pm.pm', compact('show_indexs'));
+    }
+
+    public function delete(document $document)
+    {
+        $path = storage_path('app/Documents/' . $document->text_name);
+        Storage::delete($path);
+        $documet = DB::table('documents')
+            -> where('id' , '=' , $document->id)
+            ->delete();
+        return redirect ('pm');
     }
 
 
