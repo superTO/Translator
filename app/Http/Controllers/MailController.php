@@ -18,7 +18,6 @@ class MailController extends Controller
         return Validator::make($document, [
             'filename' => 'required|max:255',
             'data' => 'required',
-            //'remark' => 'required',
             'ori_language' => 'required',
             'trans_language' => 'required',
             'file_input' => 'required',
@@ -29,6 +28,19 @@ class MailController extends Controller
     public function uploadmail(Request $request, document $document)
     {
         $id = Auth::user();
+        
+        // $rule =  [
+        //     'filename' => 'required|max:255|min:1',
+        //     'data' => 'required',
+        //     //'remark' => 'required',
+        //     'ori_language' => 'required',
+        //     'trans_language' => 'required',
+        //     'file_input' => 'required',
+        //     'document_type' => 'required',
+        // ];
+        //  $this->validate($request, $rule);
+        
+        
 
         $PMemail = DB::table('users')->where('role', 2)->value('email');
         $email = new getmail();
@@ -37,7 +49,10 @@ class MailController extends Controller
         $docu_name = sprintf('%s-%s.%s', md5(microtime(true)), str_random(8), $request->file('file_input')->guessExtension());
 
         $request->file('file_input')->storeAs('Documents', $docu_name);
+        
 
+        
+        
         $document = document::create([
             'document_name' => $request['filename'],
             'due_date' => $request['date'],
