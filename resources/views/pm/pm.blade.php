@@ -71,8 +71,13 @@
                             <span class="glyphicon glyphicon-list" aria-hidden="true"></span></a>
                     </td>
                     <td>
+                        @if($show_index -> document_type == 1)
                         <a href = "assign/{{$show_index ->d_id}}">
-                            <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span></a>
+                            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></a>
+                        @else
+                            <a href = "assign/{{$show_index ->d_id}}">
+                                <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span></a>
+                        @endif
                     </td>
                         <td>
                             <a href ="delete/{{$show_index -> d_id}}">

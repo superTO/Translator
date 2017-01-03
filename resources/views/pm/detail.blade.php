@@ -68,7 +68,12 @@
 
             <div>
                     <div class="form-group  ">
-                        <a href="/valuation/{{$show_indexs[0]->id}}"><button type="button" class="btn btn-primary btn-lg btn-block">Valuation</button></a>
+                        @if($show_indexs[0] -> payment_type == 10)
+                            <a href="/valuation/{{$show_indexs[0]->id}}"><button type="button" class="btn btn-primary btn-lg btn-block" disabled>Already have valuation</button></a>
+                        @else
+                            <a href="/valuation/{{$show_indexs[0]->id}}"><button type="button" class="btn btn-primary btn-lg btn-block" >Valuation</button></a>
+                        @endif
+
                     </div>
             </div>
 

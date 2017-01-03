@@ -46,7 +46,8 @@ class PMcontroller extends Controller
         DB::table('documents')
             ->where('id' , '=' , $document->id)
             ->update(['translator1_id'=>$request->translator1_id , 'translator2_id'=>$request->translator2_id
-                 , 'translator3_id'=>$request->translator3_id , 'translator4_id'=>$request->translator4_id]
+                 , 'translator3_id'=>$request->translator3_id , 'translator4_id'=>$request->translator4_id
+                , 'document_type' => '1']
              );
         return redirect('pm');
     }
@@ -61,13 +62,13 @@ class PMcontroller extends Controller
         {
             DB::table('documents')
                 ->where('id' , '=' , $document->id)
-                ->update(['translation_type' => '10']);
+                ->update(['translation_type' => '10' , 'payment_type' => '10']);
         }
         else
         {
             DB::table('documents')
                 ->where('id' , '=' , $document->id)
-                ->update(['translation_type' => '0' , 'money' => $request -> money]);
+                ->update(['translation_type' => '0' , 'money' => $request -> money , 'payment_type' => '10']);
         }
         return redirect ('pm');
     }
