@@ -64,7 +64,7 @@
                         @elseif($show_index->translation_type==4)
                             @lang('pm.finish_state')
                         @elseif($show_index->translation_type==10)
-                            @lang('pm.Reject')
+                            @lang('pm.Rejected')
                         @endif
                     </td>
                     <td>{{$show_index -> due_date}}</td>

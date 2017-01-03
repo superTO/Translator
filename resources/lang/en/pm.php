@@ -36,6 +36,7 @@ return [
     'ini_state' => 'Initial State',
     'finish_state' => 'Finish',
     'My account' => 'My account',
+    'Rejected' => 'Rejected',
 
     'Remark' => 'Remark',
     'Delete' => 'Delete',
