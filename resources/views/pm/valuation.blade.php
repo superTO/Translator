@@ -33,6 +33,13 @@
             <div>
                 <button type="submit" class="btn btn-primary">@lang('pm.Submit')</button>
             </div>
+            @if(count($errors))
+                <span class="help-block">
+                    <strong style="color: #9A0000">
+                       {{ $errors->first() }}
+                   </strong>
+                </span>
+             @endif
         </form>
     </div>
     <div class="col-lg-4"></div>

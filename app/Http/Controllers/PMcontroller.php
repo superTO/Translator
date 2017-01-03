@@ -55,6 +55,9 @@ class PMcontroller extends Controller
     }
     public function valuation(Request $request,document $document)
     {
+        
+        $rules=['decision'=>'required'];
+        $this->validate($request, $rules);
         if($request -> decision != 'Accept')
         {
             DB::table('documents')
@@ -63,6 +66,8 @@ class PMcontroller extends Controller
         }
         else
         {
+            $rule=['money'=>'required'];
+            $this->validate($request, $rule);
             DB::table('documents')
                 ->where('id' , '=' , $document->id)
                 ->update(['translation_type' => '0' , 'money' => $request -> money , 'payment_type' => '10']);
