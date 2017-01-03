@@ -108,7 +108,7 @@ DB_PASSWORD=secret <-改成你的MySQL密碼
     
     10 -> 已 valuation 過
     
-   ```
+ 
 * document_type(暫定):
     ```
     0 -> 學術
