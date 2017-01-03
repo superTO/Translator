@@ -21,6 +21,7 @@ class PMcontroller extends Controller
 
     public function ViewCertainProcess($id){
         $show_indexs = DB::table('documents')
+            //->where('id' , '=' , $id)
             ->select('documents.id AS d_id', 'documents.*', 'users.*')
             ->join('users' , 'documents.upload_user_id' , '=' , 'users.id')->get();
         //dump($show_indexs);
@@ -59,13 +60,25 @@ class PMcontroller extends Controller
     }
     public function valuation(Request $request,document $document)
     {
-        dd($request->decison);
+        if($request -> decision != 'Accept')
+        {
+            DB::table('documents')
+                ->where('id' , '=' , $document->id)
+                ->update(['translation_type' => '10']);
+        }
+        else
+        {
+            DB::table('documents')
+                ->where('id' , '=' , $document->id)
+                ->update(['translation_type' => '0' , 'money' => $request -> money]);
+        }
+        return redirect ('pm');
     }
     public function searchDocu(Request $request)
     {
         $keyword = $request->input('search');
         $show_indexs = document::searchDocu($keyword)->get();
-        
+
         return view('pm.pm', compact('show_indexs'));
     }
 

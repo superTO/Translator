@@ -12,10 +12,15 @@
             {{ csrf_field() }}
             <div class=" form-group ">
                 <legend><h2>@lang('pm.Accept?')</h2></legend>
-                <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
-                    <input type="button" name="decison" value="@lang('pm.Accept')" class="btn btn-default"></input>
-                    <input type="button" name="decison" value="@lang('pm.Reject')" class="btn btn-default"></input>
+                <div>
+                    accept
+                    <input type="radio" name="decision" value="Accept" class="btn btn-default">
                 </div>
+                <div>
+                    reject
+                    <input type="radio" name="decision" value="Reject" class="btn btn-default">
+                </div>
+
             </div>
             <div class=" form-group">
                 <label class="sr-only" for="exampleInputAmount">@lang('pm.Amount')</label>
