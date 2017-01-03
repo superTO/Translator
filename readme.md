@@ -62,7 +62,7 @@ DB_PASSWORD=secret <-改成你的MySQL密碼
 * due_date ->　uploader 預期之日期
 * original_language -> 原文件語言
 * translated_language -> 欲翻譯後的語言
-* document_type ->　欲翻譯之文件類型(學術、法規...)
+* document_type ->　PM是否已指派人去工作(1 -> 已指派)
 * upload_user_id -> 上傳者欲翻譯文件者的id(已與users table的id連動)
 * translation_type -> 文件翻譯之狀態(未翻、一校...)
 * translator1_id ->　第一位翻譯者其id(可空)
