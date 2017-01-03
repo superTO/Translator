@@ -69,7 +69,7 @@ class AdminController extends Controller
     {
         $keyword = $request->input('search');
         $ids = User::searchUser($keyword)->get();
-
+        
         return view('admin.index', compact('ids'));
     }
 }

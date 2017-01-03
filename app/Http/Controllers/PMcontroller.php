@@ -22,15 +22,12 @@ class PMcontroller extends Controller
 
     public function ViewCertainProcess($id){
         $show_indexs=document::with('upload_user')->where('id','=',$id)->get();
-       // dd($show_indexs);
         return view('pm.detail' , compact('show_indexs'));
 
     }
 
     public function download($filename){
         $path = storage_path('app/Documents/' .$filename);
-//        $path = 'storage/app/Documents' . '/' . $filename;
-
         return response()->download($path);
 
     }
@@ -79,16 +76,12 @@ class PMcontroller extends Controller
             ->where('document_name', 'LIKE', "%$keyword%")
             ->select('documents.id AS d_id', 'documents.*', 'users.*')
             ->join('users' , 'documents.upload_user_id' , '=' , 'users.id')->get();
-        //$show_indexs = document::searchDocu($keyword)->get();
-        //$show_indexs=document::with('upload_user')->where('document_name', 'LIKE', "%$keyword%")->get();
-        //dd($show_indexs);
         return view('pm.pm', compact('show_indexs'));
     }
 
     public function delete(document $document)
     {
         $path = storage_path('app/Documents/' . $document->text_name);
-        //dd($path);
         File::delete($path);
        $documet = DB::table('documents')
           -> where('id' , '=' , $document->id)
