@@ -12,7 +12,7 @@
         <h1>Documents upload to Translator</h1>
         
         <p>
-           context 
+           context
         </p>
     
     </body>

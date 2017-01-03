@@ -62,7 +62,7 @@
                                     @lang('pm.3rd-proof')
                                 @elseif($docu->translation_type==4)
                                     @lang('pm.finish_state')
-                                @elseif($show_index->translation_type==10)
+                                @elseif($docu->translation_type==10)
                                     @lang('pm.Rejected')
                                 @endif
                             </td>
