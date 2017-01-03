@@ -31,7 +31,7 @@ class MailController extends Controller
         $rules=[
             'filename' => 'required|max:255',
             'date' => 'required',
-            'file_input' => 'required',
+            'file_input' => 'required|mimes:docx,doc|max:25000'
         ];
         $this->validate($request, $rules);
         $id = Auth::user();

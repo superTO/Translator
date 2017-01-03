@@ -34,8 +34,6 @@ class PMcontroller extends Controller
 
     public function assign(document $document){
         $user = DB::table('users')->where('role' , '=' , '3')->get();
-        //dump($user);
-        //exit(0);
         return view('pm.assign' , compact('user','document'));
     }
 
