@@ -99,6 +99,8 @@ DB_PASSWORD=secret <-改成你的MySQL密碼
     
     4 -> 處理完成
     
+    10 -> 遭 PM 拒絕
+    
     ```
 * payment_type:
     ```
@@ -106,7 +108,9 @@ DB_PASSWORD=secret <-改成你的MySQL密碼
     
     1 -> 已付款
     
-    10 -> 已 valuation 過
+    10 -> 已 valuation 過
+    
+    11 -> 已 Reject
     
     ```
   
