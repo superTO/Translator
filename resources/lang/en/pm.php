@@ -38,4 +38,6 @@ return [
     'My account' => 'My account',
 
     'Remark' => 'Remark',
+    'Delete' => 'Delete',
+    'Valu' => 'Valuation',
 ];

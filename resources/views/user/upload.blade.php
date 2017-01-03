@@ -63,12 +63,6 @@
                 </small>
             </div>
 
-            <div class="form-check">
-                <label class="form-check-label">
-                    <input name="check" type="checkbox" class="form-check-input">
-                    @lang('user.Serve')
-                </label>
-            </div>
             
             <!--<a href="{{action('MailController@uploadmail')}}" type="submit" class="btn btn-primary">Submit</a>-->
             <button type="submit" class="btn btn-primary">@lang('user.Submit')</button>

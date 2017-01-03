@@ -38,5 +38,7 @@ return [
     'My account' => '我的帳戶',
 
     'Remark' => '備註',
+    'Delete' => '刪除',
+    'Valu' => '估價',
 
 ];

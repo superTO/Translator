@@ -44,8 +44,8 @@
                     <th>@lang('pm.Owner')</th>
                     <th>@lang('pm.Details')</th>
                     <th>@lang('pm.Assign')</th>
-                    <th>delete</th>
-                    <th>Valuation</th>
+                    <th>@lang('pm.Delete')</th>
+                    <th>@lang('pm.Valu')</th>
                 </tr>
                 </thead>
 
