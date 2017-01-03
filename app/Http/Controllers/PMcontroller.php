@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 use DB;
 use Illuminate\Support\Facades\Storage;
-
+use File;
 class PMcontroller extends Controller
 {
 
@@ -82,10 +82,11 @@ class PMcontroller extends Controller
     public function delete(document $document)
     {
         $path = storage_path('app/Documents/' . $document->text_name);
-        Storage::delete($path);
-        $documet = DB::table('documents')
-            -> where('id' , '=' , $document->id)
-            ->delete();
+        //dd($path);
+        File::delete($path);
+       $documet = DB::table('documents')
+          -> where('id' , '=' , $document->id)
+          ->delete();
         return redirect ('pm');
     }
 

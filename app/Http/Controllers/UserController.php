@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\document;
 use Auth;
 use DB;
-
+use File;
 class UserController extends Controller
 {
     public function showDocument()
@@ -20,6 +20,8 @@ class UserController extends Controller
 
     public function cancelDocument($filename)
     {
+        $path = storage_path('app/Documents/' . $filename);
+        File::delete($path);
        $document=DB::table('documents')->where('text_name',$filename)->delete();
 
        return redirect('/user');
