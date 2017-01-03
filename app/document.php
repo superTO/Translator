@@ -12,7 +12,7 @@ class document extends Model
         'document_name', 'text_name', 'due_date', 'translation_type',
         'original_language', 'translated_language', 'document_type',
         'upload_user_id', 'remark', 'translator1_id', 'translator2_id',
-        'translator3_id', 'translator4_id', 'payment_type', 'money',
+        'translator3_id', 'translator4_id', 'payment_type', 'money','translated_upolad_filename'
     ];
 
     public function upload_user()
@@ -45,8 +45,7 @@ class document extends Model
             $query->where(function ($query) use ($keyword) {
                 $query->where('id', 'LIKE', "%$keyword%")
                     ->orWhere('document_name', 'LIKE', "%$keyword%")
-                    ->orWhere('translation_type', 'LIKE', "%$keyword%")
-                    ->orWhere('due_date', 'LIKE', "%$keyword%");
+                    ->orWhere('translation_type', 'LIKE', "%$keyword%");
             });
         }
 
