@@ -45,8 +45,7 @@ class document extends Model
             $query->where(function ($query) use ($keyword) {
                 $query->where('id', 'LIKE', "%$keyword%")
                     ->orWhere('document_name', 'LIKE', "%$keyword%")
-                    ->orWhere('translation_type', 'LIKE', "%$keyword%")
-                    ->orWhere('due_date', 'LIKE', "%$keyword%");
+                    ->orWhere('translation_type', 'LIKE', "%$keyword%");
             });
         }
 
