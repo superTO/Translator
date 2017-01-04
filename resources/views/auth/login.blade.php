@@ -44,7 +44,9 @@
                                 <button type="submit" class="btn btn-primary">
                                     @lang('login.Login')
                                 </button>
-
+                                <a class="btn btn-link" href="{{ url('/password/reset') }}">
+                                    @lang('login.Forgetpassward')
+                                 </a>
 
                             </div>
                         </div>
